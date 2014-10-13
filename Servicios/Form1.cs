@@ -7,13 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-/*
- * using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
- */
+
 namespace Servicios
 {
     public partial class Main : Form
@@ -52,9 +46,9 @@ namespace Servicios
             v_resultado = ObjPermisos.ObtenerPermiso(v_usuario, v_password);
       
             //Determinar si tiene permisos para ingresar al sistema y para que form
-            MessageBox.Show(v_resultado.ToString());
-            MessageBox.Show(ObjUsuarios.A_Usuario[0]);
-            MessageBox.Show(ObjUsuarios.A_Password[0]);
+            //MessageBox.Show(v_resultado.ToString());
+            //MessageBox.Show(ObjUsuarios.A_Usuario[0]);
+            //MessageBox.Show(ObjUsuarios.A_Password[0]);
             if (v_resultado == 2) {
             ObjElige.Show();
             this.Hide();

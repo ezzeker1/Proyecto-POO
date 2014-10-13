@@ -57,6 +57,7 @@
             this.c4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPermisos = new System.Windows.Forms.Button();
             this.GBAccionesUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             // LblPBUsuario
             // 
             this.LblPBUsuario.AutoSize = true;
-            this.LblPBUsuario.Location = new System.Drawing.Point(662, 9);
+            this.LblPBUsuario.Location = new System.Drawing.Point(663, 9);
             this.LblPBUsuario.Name = "LblPBUsuario";
             this.LblPBUsuario.Size = new System.Drawing.Size(46, 13);
             this.LblPBUsuario.TabIndex = 0;
@@ -73,7 +74,7 @@
             // lblPAResUsuario
             // 
             this.lblPAResUsuario.AutoSize = true;
-            this.lblPAResUsuario.Location = new System.Drawing.Point(718, 9);
+            this.lblPAResUsuario.Location = new System.Drawing.Point(719, 9);
             this.lblPAResUsuario.Name = "lblPAResUsuario";
             this.lblPAResUsuario.Size = new System.Drawing.Size(37, 13);
             this.lblPAResUsuario.TabIndex = 1;
@@ -124,11 +125,11 @@
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(309, 31);
+            this.btnMostrar.Location = new System.Drawing.Point(312, 31);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(80, 43);
             this.btnMostrar.TabIndex = 16;
-            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.Text = "Listar";
             this.btnMostrar.UseVisualStyleBackColor = true;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
@@ -145,6 +146,7 @@
             // 
             this.txtPAPassword.Location = new System.Drawing.Point(274, 110);
             this.txtPAPassword.Name = "txtPAPassword";
+            this.txtPAPassword.PasswordChar = '*';
             this.txtPAPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPAPassword.TabIndex = 14;
             // 
@@ -161,7 +163,7 @@
             // 
             this.txtPAEmail.Location = new System.Drawing.Point(274, 85);
             this.txtPAEmail.Name = "txtPAEmail";
-            this.txtPAEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtPAEmail.Size = new System.Drawing.Size(127, 20);
             this.txtPAEmail.TabIndex = 12;
             // 
             // lblPATusuario
@@ -206,6 +208,7 @@
             this.BtnModificar.TabIndex = 4;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // lblPAUsuario
             // 
@@ -241,6 +244,8 @@
             // 
             // DGUsuarios
             // 
+            this.DGUsuarios.AllowUserToOrderColumns = true;
+            this.DGUsuarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DGUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.c1,
@@ -251,7 +256,7 @@
             this.c4,
             this.c5,
             this.c7});
-            this.DGUsuarios.Location = new System.Drawing.Point(12, 236);
+            this.DGUsuarios.Location = new System.Drawing.Point(10, 236);
             this.DGUsuarios.Name = "DGUsuarios";
             this.DGUsuarios.Size = new System.Drawing.Size(746, 213);
             this.DGUsuarios.TabIndex = 4;
@@ -299,11 +304,21 @@
             this.c7.Name = "c7";
             this.c7.Width = 60;
             // 
+            // btnPermisos
+            // 
+            this.btnPermisos.Location = new System.Drawing.Point(628, 41);
+            this.btnPermisos.Name = "btnPermisos";
+            this.btnPermisos.Size = new System.Drawing.Size(128, 43);
+            this.btnPermisos.TabIndex = 5;
+            this.btnPermisos.Text = "Asignar Permisos";
+            this.btnPermisos.UseVisualStyleBackColor = true;
+            // 
             // PanelAdministrativo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(765, 461);
+            this.ClientSize = new System.Drawing.Size(769, 461);
+            this.Controls.Add(this.btnPermisos);
             this.Controls.Add(this.DGUsuarios);
             this.Controls.Add(this.GBAccionesUsuario);
             this.Controls.Add(this.lblPAResUsuario);
@@ -349,5 +364,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn c4;
         private System.Windows.Forms.DataGridViewTextBoxColumn c5;
         private System.Windows.Forms.DataGridViewTextBoxColumn c7;
+        private System.Windows.Forms.Button btnPermisos;
     }
 }
