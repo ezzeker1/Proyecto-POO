@@ -32,6 +32,7 @@
             this.lblPAResUsuario = new System.Windows.Forms.Label();
             this.BtnCrear = new System.Windows.Forms.Button();
             this.GBAccionesUsuario = new System.Windows.Forms.GroupBox();
+            this.CBTUsuario = new System.Windows.Forms.ComboBox();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.lblPAPassword = new System.Windows.Forms.Label();
             this.txtPAPassword = new System.Windows.Forms.TextBox();
@@ -49,13 +50,13 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.DGUsuarios = new System.Windows.Forms.DataGridView();
             this.c1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.C6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CBTUsuario = new System.Windows.Forms.ComboBox();
             this.GBAccionesUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             // LblPBUsuario
             // 
             this.LblPBUsuario.AutoSize = true;
-            this.LblPBUsuario.Location = new System.Drawing.Point(592, 9);
+            this.LblPBUsuario.Location = new System.Drawing.Point(662, 9);
             this.LblPBUsuario.Name = "LblPBUsuario";
             this.LblPBUsuario.Size = new System.Drawing.Size(46, 13);
             this.LblPBUsuario.TabIndex = 0;
@@ -72,7 +73,7 @@
             // lblPAResUsuario
             // 
             this.lblPAResUsuario.AutoSize = true;
-            this.lblPAResUsuario.Location = new System.Drawing.Point(648, 9);
+            this.lblPAResUsuario.Location = new System.Drawing.Point(718, 9);
             this.lblPAResUsuario.Name = "lblPAResUsuario";
             this.lblPAResUsuario.Size = new System.Drawing.Size(37, 13);
             this.lblPAResUsuario.TabIndex = 1;
@@ -112,6 +113,14 @@
             this.GBAccionesUsuario.TabIndex = 3;
             this.GBAccionesUsuario.TabStop = false;
             this.GBAccionesUsuario.Text = "Acciones Para usuarios";
+            // 
+            // CBTUsuario
+            // 
+            this.CBTUsuario.FormattingEnabled = true;
+            this.CBTUsuario.Location = new System.Drawing.Point(103, 166);
+            this.CBTUsuario.Name = "CBTUsuario";
+            this.CBTUsuario.Size = new System.Drawing.Size(100, 21);
+            this.CBTUsuario.TabIndex = 17;
             // 
             // btnMostrar
             // 
@@ -235,6 +244,7 @@
             this.DGUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.c1,
+            this.c8,
             this.c2,
             this.c3,
             this.C6,
@@ -243,13 +253,19 @@
             this.c7});
             this.DGUsuarios.Location = new System.Drawing.Point(12, 236);
             this.DGUsuarios.Name = "DGUsuarios";
-            this.DGUsuarios.Size = new System.Drawing.Size(673, 213);
+            this.DGUsuarios.Size = new System.Drawing.Size(746, 213);
             this.DGUsuarios.TabIndex = 4;
             // 
             // c1
             // 
             this.c1.HeaderText = "Tipo de Usuario";
             this.c1.Name = "c1";
+            // 
+            // c8
+            // 
+            this.c8.HeaderText = "Usuario";
+            this.c8.Name = "c8";
+            this.c8.Width = 70;
             // 
             // c2
             // 
@@ -283,19 +299,11 @@
             this.c7.Name = "c7";
             this.c7.Width = 60;
             // 
-            // CBTUsuario
-            // 
-            this.CBTUsuario.FormattingEnabled = true;
-            this.CBTUsuario.Location = new System.Drawing.Point(103, 166);
-            this.CBTUsuario.Name = "CBTUsuario";
-            this.CBTUsuario.Size = new System.Drawing.Size(100, 21);
-            this.CBTUsuario.TabIndex = 17;
-            // 
             // PanelAdministrativo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 461);
+            this.ClientSize = new System.Drawing.Size(765, 461);
             this.Controls.Add(this.DGUsuarios);
             this.Controls.Add(this.GBAccionesUsuario);
             this.Controls.Add(this.lblPAResUsuario);
@@ -332,13 +340,14 @@
         private System.Windows.Forms.TextBox txtPAPassword;
         private System.Windows.Forms.Button btnMostrar;
         public System.Windows.Forms.DataGridView DGUsuarios;
+        private System.Windows.Forms.ComboBox CBTUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn c1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c8;
         private System.Windows.Forms.DataGridViewTextBoxColumn c2;
         private System.Windows.Forms.DataGridViewTextBoxColumn c3;
         private System.Windows.Forms.DataGridViewTextBoxColumn C6;
         private System.Windows.Forms.DataGridViewTextBoxColumn c4;
         private System.Windows.Forms.DataGridViewTextBoxColumn c5;
         private System.Windows.Forms.DataGridViewTextBoxColumn c7;
-        private System.Windows.Forms.ComboBox CBTUsuario;
     }
 }

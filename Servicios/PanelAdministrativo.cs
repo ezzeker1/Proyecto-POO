@@ -20,8 +20,6 @@ namespace Servicios
         {
             InitializeComponent();
             DGUsuarios.Hide();
-            ObjUsuarios.A_Nombre[0] = "admin";
-            ObjUsuarios.A_Password[0] = "pass";
             CBTUsuario.Items.Add("Administrador");
             CBTUsuario.Items.Add("Usuario");
             CBTUsuario.Items.Add("Proveedor");
@@ -32,7 +30,7 @@ namespace Servicios
 
             // ==============================================================================
             //Variables a las que se le asignara los valores ingresados por el operario
-            String v_nombre = "", v_apellidoP = "", v_ApellidoM = "", v_Password = "", v_email = "", v_telefono ="";
+            String v_usuario ="", v_nombre = "", v_apellidoP = "", v_ApellidoM = "", v_Password = "", v_email = "", v_telefono ="";
             int v_t_usuario = 0;
             // ==============================================================================
 
@@ -53,7 +51,9 @@ namespace Servicios
                 v_Password,
                 v_email,
                 v_t_usuario);
+
             ObjUsuarios.RegistrarUsuarios(
+                v_usuario,
                 v_nombre,
                 v_apellidoP,
                 v_ApellidoM,
@@ -61,30 +61,16 @@ namespace Servicios
                 v_email,
                 v_telefono,
                 v_t_usuario);
-            
             // ==============================================================================
-           
            
         }
         public void MostrarUsuarios() {
             //Manipular el DataGrill
             DGUsuarios.Rows.Clear();
-         //   MessageBox.Show(ObjUsuarios.TamanioArray().ToString());
             for (int i = 0; i < ObjUsuarios.v_contador; i++) { 
-            DGUsuarios.Rows.Add(ObjUsuarios.A_TUsuario[i],ObjUsuarios.A_Nombre[i],ObjUsuarios.A_ApellidoP[i],
-                                ObjUsuarios.A_ApellidoM[i],ObjUsuarios.A_Password[i],ObjUsuarios.A_Email[i], 
-                                ObjUsuarios.A_Telefono[i]); }
-                //for (int i = 0; i <= v_contador - 1; i++){
-                //    DGUsuarios.Rows.Add(
-                //        ObjAUsuarios[i].v_t_Usurio,
-                //        ObjAUsuarios[i].v_usuario,
-                //        ObjAUsuarios[i].v_apellidoP,
-                //        ObjAUsuarios[i].v_ApellidoM,
-                //        ObjAUsuarios[i].v_password,
-                //        ObjAUsuarios[i].v_Email
-                //        );}
-                DGUsuarios.Show();
-        }
+            DGUsuarios.Rows.Add(ObjUsuarios.A_Usuario[i],ObjUsuarios.A_TUsuario[i],ObjUsuarios.A_Nombre[i],ObjUsuarios.A_ApellidoP[i],
+                                ObjUsuarios.A_ApellidoM[i],ObjUsuarios.A_Password[i],ObjUsuarios.A_Email[i],ObjUsuarios.A_Telefono[i]); }
+            DGUsuarios.Show();}
 
         private void btnMostrar_Click(object sender, EventArgs e)
         {

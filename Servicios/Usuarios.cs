@@ -9,6 +9,7 @@ namespace Servicios
     class Usuarios
     {
         public int v_contador = 1;
+        public string[] A_Usuario = new string[100]; //Usuario para el ingreso al sistema
         public string[] A_Nombre = new string[100]; // Array para guardar los nombres
         public string[] A_ApellidoP = new string[100]; // Array para guardar los Apellidos Maternos
         public string[] A_ApellidoM = new string[100]; // Array para guardar los Apellidos Paterno
@@ -44,7 +45,9 @@ namespace Servicios
 
         }
 
+        //Registrar al Usuario en el Sistema
         public void RegistrarUsuarios(
+            string p_usuario,
             string p_nombres,
             string p_apellidoP,
             string p_apellidoM,
@@ -53,6 +56,7 @@ namespace Servicios
             string p_telefono,
             int p_t_usuario)
         {
+            A_Usuario[v_contador] = p_usuario;
             A_ApellidoP[v_contador] = p_apellidoP;
             A_ApellidoM[v_contador] = p_apellidoM;
             A_Email[v_contador] = p_email;
@@ -61,6 +65,40 @@ namespace Servicios
             A_Telefono[v_contador] = p_telefono;
             A_TUsuario[v_contador] = p_t_usuario;
             v_contador++;  
+        }
+
+        //Modificar al Usuario
+        public void ModificarUsuario(int p_tusuario, string p_usuario,string p_password ,string p_nombre,
+                                     string p_apellidop, string p_apellidom, string p_email,string p_telefono) {
+
+                for (int i = 0; i < A_Usuario.Length; i++) {
+                   if(p_usuario == A_Usuario[i]){
+                       A_Nombre[i] = p_nombre;
+                       A_ApellidoP[i] = p_apellidop;
+                       A_ApellidoM[i] = p_apellidom;
+                       A_Email[i] = p_email;
+                       A_Telefono[i] = p_telefono;
+                       A_Password[i] = p_password;
+                       A_Usuario[i] = p_usuario;
+                       break;
+                   }
+                }
+        }
+        //Eliminar al Usuario
+        public void EliminarUsuario(string p_usuario) {
+            for (int i = 0; i < A_Usuario.Length; i++){
+                if(p_usuario == A_Usuario[i]){
+                   Array.Clear(A_Usuario,i,1);
+                   Array.Clear(A_Nombre,i,1);
+                   Array.Clear(A_ApellidoP,i,1);
+                   Array.Clear(A_ApellidoM,i,1);
+                   Array.Clear(A_Telefono,i,1);
+                   Array.Clear(A_Email,i,1);
+                   Array.Clear(A_Password, i, 1);
+                   Array.Clear(A_TUsuario, i, 1);
+                   break;
+                }
+            }
         }
     }
 }
