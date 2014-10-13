@@ -37,12 +37,8 @@ namespace Servicios
             v_usuario = txtUsuario.Text;
             v_password = txtPassword.Text;
 
-            v_resultado = ObjPermisos.ValidarPermisos(v_usuario, v_password);
-            /*
-             * 2 = Acceso al panel de Usuario.
-             * 3 = Acceso al Panel Administrativo.
-             * 1 = No tiene Acceso a la aplicación.
-             */
+            v_resultado = ObjPermisos.ObtenerPermiso(v_usuario, v_password);
+      
             if (v_resultado == 2) {
             ObjElige.Show();
             this.Hide();

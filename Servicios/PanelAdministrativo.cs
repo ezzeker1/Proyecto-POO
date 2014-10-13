@@ -14,13 +14,17 @@ namespace Servicios
     {
         //Creamos la Instancia
         Usuarios ObjUsuarios = new Usuarios();
+        Permisos ObjPermisos = new Permisos();
 
         public PanelAdministrativo()
         {
             InitializeComponent();
             DGUsuarios.Hide();
-            //ObjUsuarios.A_Nombre[0] = "admin";
-            //ObjUsuarios.A_Password[0] = "pass";
+            ObjUsuarios.A_Nombre[0] = "admin";
+            ObjUsuarios.A_Password[0] = "pass";
+            CBTUsuario.Items.Add("Administrador");
+            CBTUsuario.Items.Add("Usuario");
+            CBTUsuario.Items.Add("Proveedor");
         }
 
         private void BtnCrear_Click(object sender, EventArgs e)
@@ -39,7 +43,7 @@ namespace Servicios
             v_ApellidoM = txtPAApellidoM.Text;
             v_email = txtPAEmail.Text;
             v_Password = txtPAPassword.Text;
-            v_t_usuario = Int32.Parse(txtPATUsuario.Text);
+            v_t_usuario = ObjPermisos.Decodificar(CBTUsuario.Items.ToString()); // Devuelve el Valor que representa al permiso seleccionado
             // ==============================================================================
            
             //Utilizar el objeto y agregar datos y Aumenta el contador del Array.

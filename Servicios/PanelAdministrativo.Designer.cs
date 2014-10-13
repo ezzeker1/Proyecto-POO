@@ -38,7 +38,6 @@
             this.lblPAEmail = new System.Windows.Forms.Label();
             this.txtPAEmail = new System.Windows.Forms.TextBox();
             this.lblPATusuario = new System.Windows.Forms.Label();
-            this.txtPATUsuario = new System.Windows.Forms.TextBox();
             this.lblPAApellidoM = new System.Windows.Forms.Label();
             this.txtPAApellidoM = new System.Windows.Forms.TextBox();
             this.lblPAApellidoP = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@
             this.c4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CBTUsuario = new System.Windows.Forms.ComboBox();
             this.GBAccionesUsuario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -90,13 +90,13 @@
             // 
             // GBAccionesUsuario
             // 
+            this.GBAccionesUsuario.Controls.Add(this.CBTUsuario);
             this.GBAccionesUsuario.Controls.Add(this.btnMostrar);
             this.GBAccionesUsuario.Controls.Add(this.lblPAPassword);
             this.GBAccionesUsuario.Controls.Add(this.txtPAPassword);
             this.GBAccionesUsuario.Controls.Add(this.lblPAEmail);
             this.GBAccionesUsuario.Controls.Add(this.txtPAEmail);
             this.GBAccionesUsuario.Controls.Add(this.lblPATusuario);
-            this.GBAccionesUsuario.Controls.Add(this.txtPATUsuario);
             this.GBAccionesUsuario.Controls.Add(this.lblPAApellidoM);
             this.GBAccionesUsuario.Controls.Add(this.txtPAApellidoM);
             this.GBAccionesUsuario.Controls.Add(this.lblPAApellidoP);
@@ -163,13 +163,6 @@
             this.lblPATusuario.Size = new System.Drawing.Size(85, 13);
             this.lblPATusuario.TabIndex = 11;
             this.lblPATusuario.Text = "Tipo de Usuario:";
-            // 
-            // txtPATUsuario
-            // 
-            this.txtPATUsuario.Location = new System.Drawing.Point(103, 166);
-            this.txtPATUsuario.Name = "txtPATUsuario";
-            this.txtPATUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtPATUsuario.TabIndex = 10;
             // 
             // lblPAApellidoM
             // 
@@ -290,6 +283,14 @@
             this.c7.Name = "c7";
             this.c7.Width = 60;
             // 
+            // CBTUsuario
+            // 
+            this.CBTUsuario.FormattingEnabled = true;
+            this.CBTUsuario.Location = new System.Drawing.Point(103, 166);
+            this.CBTUsuario.Name = "CBTUsuario";
+            this.CBTUsuario.Size = new System.Drawing.Size(100, 21);
+            this.CBTUsuario.TabIndex = 17;
+            // 
             // PanelAdministrativo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,7 +326,6 @@
         private System.Windows.Forms.Label lblPAEmail;
         private System.Windows.Forms.TextBox txtPAEmail;
         private System.Windows.Forms.Label lblPATusuario;
-        private System.Windows.Forms.TextBox txtPATUsuario;
         private System.Windows.Forms.Label lblPAApellidoM;
         private System.Windows.Forms.TextBox txtPAApellidoM;
         private System.Windows.Forms.Label lblPAPassword;
@@ -339,5 +339,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn c4;
         private System.Windows.Forms.DataGridViewTextBoxColumn c5;
         private System.Windows.Forms.DataGridViewTextBoxColumn c7;
+        private System.Windows.Forms.ComboBox CBTUsuario;
     }
 }
