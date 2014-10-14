@@ -21,10 +21,12 @@ namespace Servicios
             InitializeComponent();
             
         }
+        
         public EligeServicio(string p_usuario)
         {
             string v_user = p_usuario;
             LblESResUsuario.Text = v_user;
+            
         }
 
 

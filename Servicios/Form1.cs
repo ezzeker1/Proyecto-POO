@@ -13,11 +13,14 @@ namespace Servicios
     public partial class Main : Form
     {
         /*
-         * Vamos a Hardcodear lo menos posible e investigar funciones adicionales para este proyecto.
          * Fecha de Inicio de la programación: 21/09/2014 02:40 AM
          */
         Permisos ObjPermisos = new Permisos();
         Usuarios ObjUsuarios = new Usuarios();
+        //Instanciar los forms a Utilizar
+        //EligeServicio ObjElige = new EligeServicio();
+        PanelAdministrativo ObjPanelADm = new PanelAdministrativo();
+
         public Main()
         {
             InitializeComponent();
@@ -36,9 +39,6 @@ namespace Servicios
             string v_usuario ="", v_password = "";
             int v_resultado = 18;
             
-            //Instanciar los forms a Utilizar
-            EligeServicio ObjElige = new EligeServicio();
-            PanelAdministrativo ObjPanelADm = new PanelAdministrativo();
 
             //Asignacion de datos a las variables
             v_usuario = txtUsuario.Text;
@@ -47,8 +47,8 @@ namespace Servicios
       
             //Determinar si tiene permisos para ingresar al sistema y para que form
             if (v_resultado == 2) {
-            ObjElige.Show();
-            this.Hide();
+          //  ObjElige.Show();
+          //  this.Hide();
             }
             else if (v_resultado == 1) {
                 ObjPanelADm.Show();

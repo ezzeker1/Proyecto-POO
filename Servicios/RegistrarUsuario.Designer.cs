@@ -42,11 +42,15 @@
             this.lblPAUsuario = new System.Windows.Forms.Label();
             this.txtPAApellidoP = new System.Windows.Forms.TextBox();
             this.txtPANombre = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.GBDatosUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
             // GBDatosUsuario
             // 
+            this.GBDatosUsuario.Controls.Add(this.txtUsuario);
+            this.GBDatosUsuario.Controls.Add(this.lblUsuario);
             this.GBDatosUsuario.Controls.Add(this.CBTUsuarioeeeeeee);
             this.GBDatosUsuario.Controls.Add(this.CBTUsuario);
             this.GBDatosUsuario.Controls.Add(this.lblPAPassword);
@@ -62,14 +66,14 @@
             this.GBDatosUsuario.Controls.Add(this.txtPANombre);
             this.GBDatosUsuario.Location = new System.Drawing.Point(33, 26);
             this.GBDatosUsuario.Name = "GBDatosUsuario";
-            this.GBDatosUsuario.Size = new System.Drawing.Size(440, 229);
+            this.GBDatosUsuario.Size = new System.Drawing.Size(440, 239);
             this.GBDatosUsuario.TabIndex = 0;
             this.GBDatosUsuario.TabStop = false;
             this.GBDatosUsuario.Text = "Datos de Usuario";
             // 
             // CBTUsuarioeeeeeee
             // 
-            this.CBTUsuarioeeeeeee.Location = new System.Drawing.Point(275, 184);
+            this.CBTUsuarioeeeeeee.Location = new System.Drawing.Point(287, 191);
             this.CBTUsuarioeeeeeee.Name = "CBTUsuarioeeeeeee";
             this.CBTUsuarioeeeeeee.Size = new System.Drawing.Size(136, 29);
             this.CBTUsuarioeeeeeee.TabIndex = 30;
@@ -80,7 +84,7 @@
             // CBTUsuario
             // 
             this.CBTUsuario.FormattingEnabled = true;
-            this.CBTUsuario.Location = new System.Drawing.Point(96, 107);
+            this.CBTUsuario.Location = new System.Drawing.Point(99, 131);
             this.CBTUsuario.Name = "CBTUsuario";
             this.CBTUsuario.Size = new System.Drawing.Size(121, 21);
             this.CBTUsuario.TabIndex = 29;
@@ -88,7 +92,7 @@
             // lblPAPassword
             // 
             this.lblPAPassword.AutoSize = true;
-            this.lblPAPassword.Location = new System.Drawing.Point(34, 167);
+            this.lblPAPassword.Location = new System.Drawing.Point(37, 191);
             this.lblPAPassword.Name = "lblPAPassword";
             this.lblPAPassword.Size = new System.Drawing.Size(56, 13);
             this.lblPAPassword.TabIndex = 28;
@@ -96,7 +100,7 @@
             // 
             // txtPAPassword
             // 
-            this.txtPAPassword.Location = new System.Drawing.Point(96, 160);
+            this.txtPAPassword.Location = new System.Drawing.Point(99, 184);
             this.txtPAPassword.Name = "txtPAPassword";
             this.txtPAPassword.PasswordChar = '*';
             this.txtPAPassword.Size = new System.Drawing.Size(100, 20);
@@ -105,7 +109,7 @@
             // lblPAEmail
             // 
             this.lblPAEmail.AutoSize = true;
-            this.lblPAEmail.Location = new System.Drawing.Point(55, 141);
+            this.lblPAEmail.Location = new System.Drawing.Point(58, 165);
             this.lblPAEmail.Name = "lblPAEmail";
             this.lblPAEmail.Size = new System.Drawing.Size(35, 13);
             this.lblPAEmail.TabIndex = 26;
@@ -113,7 +117,7 @@
             // 
             // txtPAEmail
             // 
-            this.txtPAEmail.Location = new System.Drawing.Point(96, 134);
+            this.txtPAEmail.Location = new System.Drawing.Point(99, 158);
             this.txtPAEmail.Name = "txtPAEmail";
             this.txtPAEmail.Size = new System.Drawing.Size(196, 20);
             this.txtPAEmail.TabIndex = 25;
@@ -121,7 +125,7 @@
             // lblPATusuario
             // 
             this.lblPATusuario.AutoSize = true;
-            this.lblPATusuario.Location = new System.Drawing.Point(5, 115);
+            this.lblPATusuario.Location = new System.Drawing.Point(8, 139);
             this.lblPATusuario.Name = "lblPATusuario";
             this.lblPATusuario.Size = new System.Drawing.Size(85, 13);
             this.lblPATusuario.TabIndex = 24;
@@ -130,7 +134,7 @@
             // lblPAApellidoM
             // 
             this.lblPAApellidoM.AutoSize = true;
-            this.lblPAApellidoM.Location = new System.Drawing.Point(3, 89);
+            this.lblPAApellidoM.Location = new System.Drawing.Point(6, 113);
             this.lblPAApellidoM.Name = "lblPAApellidoM";
             this.lblPAApellidoM.Size = new System.Drawing.Size(89, 13);
             this.lblPAApellidoM.TabIndex = 23;
@@ -138,7 +142,7 @@
             // 
             // txtPAApellidoM
             // 
-            this.txtPAApellidoM.Location = new System.Drawing.Point(96, 82);
+            this.txtPAApellidoM.Location = new System.Drawing.Point(99, 106);
             this.txtPAApellidoM.Name = "txtPAApellidoM";
             this.txtPAApellidoM.Size = new System.Drawing.Size(100, 20);
             this.txtPAApellidoM.TabIndex = 22;
@@ -146,7 +150,7 @@
             // lblPAApellidoP
             // 
             this.lblPAApellidoP.AutoSize = true;
-            this.lblPAApellidoP.Location = new System.Drawing.Point(3, 63);
+            this.lblPAApellidoP.Location = new System.Drawing.Point(6, 87);
             this.lblPAApellidoP.Name = "lblPAApellidoP";
             this.lblPAApellidoP.Size = new System.Drawing.Size(87, 13);
             this.lblPAApellidoP.TabIndex = 21;
@@ -155,7 +159,7 @@
             // lblPAUsuario
             // 
             this.lblPAUsuario.AutoSize = true;
-            this.lblPAUsuario.Location = new System.Drawing.Point(38, 37);
+            this.lblPAUsuario.Location = new System.Drawing.Point(41, 61);
             this.lblPAUsuario.Name = "lblPAUsuario";
             this.lblPAUsuario.Size = new System.Drawing.Size(52, 13);
             this.lblPAUsuario.TabIndex = 20;
@@ -163,17 +167,33 @@
             // 
             // txtPAApellidoP
             // 
-            this.txtPAApellidoP.Location = new System.Drawing.Point(96, 56);
+            this.txtPAApellidoP.Location = new System.Drawing.Point(99, 80);
             this.txtPAApellidoP.Name = "txtPAApellidoP";
             this.txtPAApellidoP.Size = new System.Drawing.Size(102, 20);
             this.txtPAApellidoP.TabIndex = 19;
             // 
             // txtPANombre
             // 
-            this.txtPANombre.Location = new System.Drawing.Point(96, 30);
+            this.txtPANombre.Location = new System.Drawing.Point(99, 54);
             this.txtPANombre.Name = "txtPANombre";
             this.txtPANombre.Size = new System.Drawing.Size(225, 20);
             this.txtPANombre.TabIndex = 18;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(47, 26);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.TabIndex = 31;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(99, 26);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(144, 20);
+            this.txtUsuario.TabIndex = 32;
             // 
             // RegistrarUsuario
             // 
@@ -205,5 +225,7 @@
         private System.Windows.Forms.Label lblPAUsuario;
         private System.Windows.Forms.TextBox txtPAApellidoP;
         private System.Windows.Forms.TextBox txtPANombre;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

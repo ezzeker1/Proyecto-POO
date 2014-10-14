@@ -12,7 +12,8 @@ namespace Servicios
 {
     public partial class RegistrarUsuario : Form
     {
-        Usuarios ObjUsuarios = new Usuarios();
+       // Usuarios ObjUsuarios = new Usuarios();
+        PanelAdministrativo Obj_PanelAdm = new PanelAdministrativo();
         public RegistrarUsuario()
         {
             InitializeComponent();
@@ -20,8 +21,6 @@ namespace Servicios
             CBTUsuario.Items.Add("Usuario");
             CBTUsuario.Items.Add("Proveedor");
         }
-        
-        
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -42,6 +41,7 @@ namespace Servicios
             v_ApellidoM = txtPAApellidoM.Text;
             v_email = txtPAEmail.Text;
             v_Password = txtPAPassword.Text;
+            v_usuario = txtUsuario.Text;
             if (ObjValidaciones.ValidarFormaCorreo(v_email) <= 0)
             {
                 MessageBox.Show("El correo ingresado no es valido, favor de modificarlo.", "Mensajde de ServiFull",
@@ -51,25 +51,27 @@ namespace Servicios
             {
                 // MessageBox.Show(ObjValidaciones.ValidarFormaCorreo(v_email).ToString());
                 v_t_usuario = ObjPermisos.Decodificar(CBTUsuario.Items.ToString()); // Devuelve el Valor que representa al permiso seleccionado
+                Obj_PanelAdm.RegistrarUsuario(v_t_usuario, v_usuario, v_Password, v_nombre, v_apellidoP, v_ApellidoM, v_telefono, v_email);
                 // ==============================================================================
 
                 //Utilizar el objeto y agregar datos y Aumenta el contador del Array.
-                ObjUsuarios.ConstructorUsuarios(v_nombre,
-                    v_apellidoP,
-                    v_ApellidoM,
-                    v_Password,
-                    v_email,
-                    v_t_usuario);
+                //ObjUsuarios.ConstructorUsuarios(v_nombre,
+                //    v_apellidoP,
+                //    v_ApellidoM,
+                //    v_Password,
+                //    v_email,
+                //    v_t_usuario);
 
-                ObjUsuarios.RegistrarUsuarios(
-                    v_usuario,
-                    v_nombre,
-                    v_apellidoP,
-                    v_ApellidoM,
-                    v_Password,
-                    v_email,
-                    v_telefono,
-                    v_t_usuario);
+                //ObjUsuarios.RegistrarUsuarios(
+                //    v_usuario,
+                //    v_nombre,
+                //    v_apellidoP,
+                //    v_ApellidoM,
+                //    v_Password,
+                //    v_email,
+                //    v_telefono,
+                //    v_t_usuario);
+
                 // ==============================================================================
                 // Manipular el DataGrill
                 //DGUsuarios.Rows.Clear();

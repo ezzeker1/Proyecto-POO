@@ -46,7 +46,11 @@ namespace Servicios
         {
             
         }
-
+        public void RegistrarUsuario(int p_tusuario,string p_usuario ,string p_password,string p_nombre, string p_apellidop, 
+                                      string p_apellidom, string p_telefono, string p_email ){
+                                          ObjUsuarios.RegistrarUsuarios(p_usuario, p_nombre, p_apellidop, p_apellidom, 
+                                                                        p_password, p_email, p_telefono, p_tusuario);
+        }
         private void PanelAdministrativo_Load(object sender, EventArgs e)
         {
 
