@@ -8,7 +8,6 @@ namespace Servicios
 {
     class Permisos
     {
-        Usuarios ObjUsuario = new Usuarios();
         public string v_usuario;
         public string v_password;
 
@@ -42,12 +41,7 @@ namespace Servicios
         }
 
         //Este metodo toma el usuario y password para obtener el permiso que tiene asignado en el Array
-        public int ObtenerPermiso(string p_usuario, string p_password) {
-          //Asignar datos a la primera posicion del array.
-            ObjUsuario.A_Usuario[0] = "admin";
-            ObjUsuario.A_Password[0] = "pass";
-            ObjUsuario.A_TUsuario[0] = 1;
-          //========================================================
+        public int ObtenerPermiso(string p_usuario, string p_password, Usuarios ObjUsuario) {
 
             int v_resultado = 14;
             for (int i = 0; i < ObjUsuario.A_Usuario.Length; i++) {

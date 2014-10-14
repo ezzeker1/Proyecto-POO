@@ -43,12 +43,9 @@ namespace Servicios
             //Asignacion de datos a las variables
             v_usuario = txtUsuario.Text;
             v_password = txtPassword.Text;
-            v_resultado = ObjPermisos.ObtenerPermiso(v_usuario, v_password);
+            v_resultado = ObjPermisos.ObtenerPermiso(v_usuario, v_password, ObjUsuarios);
       
             //Determinar si tiene permisos para ingresar al sistema y para que form
-            //MessageBox.Show(v_resultado.ToString());
-            //MessageBox.Show(ObjUsuarios.A_Usuario[0]);
-            //MessageBox.Show(ObjUsuarios.A_Password[0]);
             if (v_resultado == 2) {
             ObjElige.Show();
             this.Hide();
