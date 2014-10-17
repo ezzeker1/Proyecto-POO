@@ -29,7 +29,6 @@ namespace Servicios
             
         }
 
-
         private void EligeServicio_Load(object sender, EventArgs e)
         {
             

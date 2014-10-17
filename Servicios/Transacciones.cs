@@ -8,5 +8,12 @@ namespace Servicios
 {
     class Transacciones
     {
+
+        //Adquirir Servicios
+
+        //Publicar Servicios
+
+        //
+
     }
 }

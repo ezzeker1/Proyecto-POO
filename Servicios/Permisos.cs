@@ -8,6 +8,8 @@ namespace Servicios
 {
     class Permisos
     {
+        Main ObjMain = new Main();
+
         public string v_usuario;
         public string v_password;
 
@@ -44,11 +46,12 @@ namespace Servicios
         public int ObtenerPermiso(string p_usuario, string p_password, Usuarios ObjUsuario) {
 
             int v_resultado = 14;
-            for (int i = 0; i < ObjUsuario.A_Usuario.Length; i++) {
-                
-                if (p_usuario == ObjUsuario.A_Usuario[i] && p_password == ObjUsuario.A_Password[i])
+            for (int i = 0; i < ObjMain.A_Usuario.Length; i++)
+            {
+
+                if (p_usuario == ObjMain.A_Usuario[i] && p_password == ObjMain.A_Password[i])
                 {
-                    v_resultado = ObjUsuario.A_TUsuario[i];
+                    v_resultado = ObjMain.A_TUsuario[i];
                 }
             }
                 return v_resultado;

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.GBDatosUsuario = new System.Windows.Forms.GroupBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.CBTUsuarioeeeeeee = new System.Windows.Forms.Button();
             this.CBTUsuario = new System.Windows.Forms.ComboBox();
             this.lblPAPassword = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@
             this.lblPAUsuario = new System.Windows.Forms.Label();
             this.txtPAApellidoP = new System.Windows.Forms.TextBox();
             this.txtPANombre = new System.Windows.Forms.TextBox();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.GBDatosUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,22 @@
             this.GBDatosUsuario.TabIndex = 0;
             this.GBDatosUsuario.TabStop = false;
             this.GBDatosUsuario.Text = "Datos de Usuario";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(99, 26);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(144, 20);
+            this.txtUsuario.TabIndex = 32;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(47, 26);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.TabIndex = 31;
+            this.lblUsuario.Text = "Usuario:";
             // 
             // CBTUsuarioeeeeeee
             // 
@@ -179,27 +195,11 @@
             this.txtPANombre.Size = new System.Drawing.Size(225, 20);
             this.txtPANombre.TabIndex = 18;
             // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(47, 26);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 31;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(99, 26);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(144, 20);
-            this.txtUsuario.TabIndex = 32;
-            // 
             // RegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 551);
+            this.ClientSize = new System.Drawing.Size(505, 297);
             this.Controls.Add(this.GBDatosUsuario);
             this.Name = "RegistrarUsuario";
             this.Text = "RegistrarUsuario";

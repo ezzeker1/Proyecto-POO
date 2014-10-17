@@ -15,6 +15,20 @@ namespace Servicios
         /*
          * Fecha de Inicio de la programación: 21/09/2014 02:40 AM
          */
+        
+        //========================================================================================
+        
+        public int v_contador = 1;
+        public string[] A_Usuario = new string[100]; //Usuario para el ingreso al sistema
+        public string[] A_Nombre = new string[100]; // Array para guardar los nombres
+        public string[] A_ApellidoP = new string[100]; // Array para guardar los Apellidos Maternos
+        public string[] A_ApellidoM = new string[100]; // Array para guardar los Apellidos Paterno
+        public string[] A_Password = new string[100]; // Array para guardar las Contraseñas
+        public string[] A_Email = new string[100]; // Array para guardar los Email
+        public string[] A_Telefono = new string[100]; // Array para guardar los Telefono
+        public int[] A_TUsuario = new int[100]; // Array para guardar El tipo de Usuario
+        
+        //========================================================================================
         Permisos ObjPermisos = new Permisos();
         Usuarios ObjUsuarios = new Usuarios();
         //Instanciar los forms a Utilizar
@@ -24,9 +38,9 @@ namespace Servicios
         public Main()
         {
             InitializeComponent();
-            ObjUsuarios.A_Usuario[0] = "admin";
-            ObjUsuarios.A_Password[0] = "pass";
-            ObjUsuarios.A_TUsuario[0] = 1;
+            A_Usuario[0] = "admin";
+            A_Password[0] = "pass";
+            A_TUsuario[0] = 1;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
