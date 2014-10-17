@@ -17,10 +17,17 @@ namespace Servicios
         Permisos ObjPermisos = new Permisos();
         Main ObjMain = new Main();
 
+        private string _user;
+
         public PanelAdministrativo()
         {
             InitializeComponent();
             DGUsuarios.Hide();
+        }
+
+        public string vuser {
+            get { return _user; }
+            set { _user = value; }
         }
 
         private void BtnCrear_Click(object sender, EventArgs e)
