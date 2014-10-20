@@ -47,7 +47,6 @@
             // 
             this.PBCarros.AccessibleDescription = "dsdsdsdsd";
             this.PBCarros.AccessibleName = "dddddddddd";
-            this.PBCarros.Image = global::Servicios.Properties.Resources.carros;
             this.PBCarros.Location = new System.Drawing.Point(433, 118);
             this.PBCarros.Name = "PBCarros";
             this.PBCarros.Size = new System.Drawing.Size(152, 154);
@@ -56,7 +55,6 @@
             // 
             // PBInmuebels
             // 
-            this.PBInmuebels.Image = global::Servicios.Properties.Resources.Inmuebles;
             this.PBInmuebels.Location = new System.Drawing.Point(255, 118);
             this.PBInmuebels.Name = "PBInmuebels";
             this.PBInmuebels.Size = new System.Drawing.Size(153, 153);
@@ -65,10 +63,10 @@
             // 
             // PBServicios
             // 
-            this.PBServicios.Image = global::Servicios.Properties.Resources.Rocha;
             this.PBServicios.Location = new System.Drawing.Point(76, 118);
             this.PBServicios.Name = "PBServicios";
             this.PBServicios.Size = new System.Drawing.Size(147, 154);
+            this.PBServicios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PBServicios.TabIndex = 0;
             this.PBServicios.TabStop = false;
             // 
