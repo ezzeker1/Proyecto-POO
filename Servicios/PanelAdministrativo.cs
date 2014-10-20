@@ -32,20 +32,20 @@ namespace Servicios
 
         private void BtnCrear_Click(object sender, EventArgs e)
         {
-            RegistrarUsuario F_RUsuario = new RegistrarUsuario();
-            F_RUsuario.Show();
+            //RegistrarUsuario F_RUsuario = new RegistrarUsuario();
+            //F_RUsuario.Show();
         }
        
         public void MostrarUsuarios() {
            
             //Manipular el DataGrill
             DGUsuarios.Rows.Clear();
-            for (int i = 0; i < ObjMain.v_contador; i++)
-            {
-                DGUsuarios.Rows.Add(ObjMain.A_Usuario[i], ObjMain.A_TUsuario[i], ObjMain.A_Nombre[i],
-                                ObjMain.A_ApellidoP[i], ObjMain.A_ApellidoM[i], ObjMain.A_Password[i],
-                                ObjMain.A_Email[i], ObjMain.A_Telefono[i]);
-            }
+            //for (int i = 0; i < ObjMain.v_contador; i++)
+            //{
+            //    DGUsuarios.Rows.Add(ObjMain.A_Usuario[i], ObjMain.A_TUsuario[i], ObjMain.A_Nombre[i],
+            //                    ObjMain.A_ApellidoP[i], ObjMain.A_ApellidoM[i], ObjMain.A_Password[i],
+            //                    ObjMain.A_Email[i], ObjMain.A_Telefono[i]);
+            //}
             DGUsuarios.Show();}
 
         private void btnMostrar_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace Servicios
         }
         private void PanelAdministrativo_Load(object sender, EventArgs e)
         {
-
+            lblPAResUsuario.Text = vuser;
         }
     }
 }

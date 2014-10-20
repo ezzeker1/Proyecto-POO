@@ -18,29 +18,29 @@ namespace Servicios
         
         //========================================================================================
         
-        public int v_contador = 1;
-        public string[] A_Usuario = new string[100]; //Usuario para el ingreso al sistema
-        public string[] A_Nombre = new string[100]; // Array para guardar los nombres
-        public string[] A_ApellidoP = new string[100]; // Array para guardar los Apellidos Maternos
-        public string[] A_ApellidoM = new string[100]; // Array para guardar los Apellidos Paterno
-        public string[] A_Password = new string[100]; // Array para guardar las Contraseñas
-        public string[] A_Email = new string[100]; // Array para guardar los Email
-        public string[] A_Telefono = new string[100]; // Array para guardar los Telefono
-        public int[] A_TUsuario = new int[100]; // Array para guardar El tipo de Usuario
+        //public int v_contador = 1;
+        //public string[] A_Usuario = new string[100]; //Usuario para el ingreso al sistema
+        //public string[] A_Nombre = new string[100]; // Array para guardar los nombres
+        //public string[] A_ApellidoP = new string[100]; // Array para guardar los Apellidos Maternos
+        //public string[] A_ApellidoM = new string[100]; // Array para guardar los Apellidos Paterno
+        //public string[] A_Password = new string[100]; // Array para guardar las Contraseñas
+        //public string[] A_Email = new string[100]; // Array para guardar los Email
+        //public string[] A_Telefono = new string[100]; // Array para guardar los Telefono
+        //public int[] A_TUsuario = new int[100]; // Array para guardar El tipo de Usuario
         
         //========================================================================================
         Permisos ObjPermisos = new Permisos();
         Usuarios ObjUsuarios = new Usuarios();
         //Instanciar los forms a Utilizar
         //EligeServicio ObjElige = new EligeServicio();
-        PanelAdministrativo ObjPanelADm = new PanelAdministrativo();
+       PanelAdministrativo ObjPanelADm = new PanelAdministrativo();
 
         public Main()
         {
             InitializeComponent();
-            A_Usuario[0] = "admin";
-            A_Password[0] = "pass";
-            A_TUsuario[0] = 1;
+            //A_Usuario[0] = "admin";
+            //A_Password[0] = "pass";
+            //A_TUsuario[0] = 1;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -60,13 +60,16 @@ namespace Servicios
             v_resultado = ObjPermisos.ObtenerPermiso(v_usuario, v_password, ObjUsuarios);
       
             //Determinar si tiene permisos para ingresar al sistema y para que form
-            if (v_resultado == 2) {
-          //  ObjElige.Show();
-          //  this.Hide();
+            if (v_resultado == 2)
+            {
+                //  ObjElige.Show();
+                //  this.Hide();
             }
-            else if (v_resultado == 1) {
+            else if (v_resultado == 1)
+            {
                 ObjPanelADm.Show();
                 this.Hide();
+                ObjPanelADm.vuser = txtUsuario.Text;
             }
             else
                 MessageBox.Show("No puedes ingresar...", "Algo Salio mal Aqui...", 
