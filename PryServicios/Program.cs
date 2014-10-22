@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Servicios
+namespace PryServicios
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Servicios
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Registrar_Usuario());
+            Application.Run(new Login());
         }
     }
 }

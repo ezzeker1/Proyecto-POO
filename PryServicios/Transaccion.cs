@@ -4,16 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Servicios
+namespace PryServicios
 {
-    class Transacciones
+    class Transaccion
     {
-
-        //Adquirir Servicios
-
-        //Publicar Servicios
-
-        //
-
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Servicios.Properties {
+namespace PryServicios.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Servicios.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Servicios.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PryServicios.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,39 +63,9 @@ namespace Servicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Captura_de_pantalla_2014_09_21_02_13_50 {
+        internal static System.Drawing.Bitmap Logo_app {
             get {
-                object obj = ResourceManager.GetObject("Captura de pantalla 2014-09-21 02.13.50", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap carros {
-            get {
-                object obj = ResourceManager.GetObject("carros", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Inmuebles {
-            get {
-                object obj = ResourceManager.GetObject("Inmuebles", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Rocha {
-            get {
-                object obj = ResourceManager.GetObject("Rocha", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo_app", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

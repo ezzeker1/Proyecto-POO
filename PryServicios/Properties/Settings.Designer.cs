@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Servicios.Properties
+namespace PryServicios.Properties
 {
 
 
