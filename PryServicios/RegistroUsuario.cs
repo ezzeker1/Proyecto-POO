@@ -20,11 +20,10 @@ namespace PryServicios
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             string v_usuario = "";
-            int v_resultado = 0;
+            int v_resultado = 0, v_tusuario = 2;
 
             v_usuario = txtUsuairo.Text.ToLower();
             
-           // Usuario ObjUsuario = new Usuario();
             for (int i = 0; i < Usuario.V_Contador; i++ ){
                 if (Usuario.A_Usuario[i] == v_usuario)
                 {
@@ -41,10 +40,19 @@ namespace PryServicios
                 Usuario.A_Telefono[Usuario.V_Contador] = txtTelefonos.Text;
                 Usuario.A_Edad[Usuario.V_Contador] = Int32.Parse(txtEdad.Text);
                 Usuario.A_PreguntaSecreta[Usuario.V_Contador] = txtRespuesta.Text;
+                Usuario.A_Email[Usuario.V_Contador] = txtEmail.Text;
+                Usuario.A_Permisos[Usuario.V_Contador] = v_tusuario;
                 Usuario.V_Contador++;
+
+                MessageBox.Show("Se registro Correcta el usuario " + v_usuario + " En el sistema", 
+                                "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
-            else MessageBox.Show("El usuario " + v_usuario + " Ya se encuentra registrado en el sitema", 
-                                 "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else {
+                MessageBox.Show("El usuario " + v_usuario + " Ya se encuentra registrado en el sitema, ingrese uno diferente",
+                                "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
 
         private void RegistroUsuario_Load(object sender, EventArgs e)

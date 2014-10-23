@@ -50,11 +50,36 @@
     <Compile Include="Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="MetodPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MetodPago.Designer.cs">
+      <DependentUpon>MetodPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetallesVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetallesVehiculo.Designer.cs">
+      <DependentUpon>DetallesVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inmueble.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inmuebles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inmuebles.Designer.cs">
+      <DependentUpon>Inmuebles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerfilUsuario.Designer.cs">
+      <DependentUpon>PerfilUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,13 +95,43 @@
     <Compile Include="RestablecerPassword.Designer.cs">
       <DependentUpon>RestablecerPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Servicio.cs" />
+    <Compile Include="Servicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicios.Designer.cs">
+      <DependentUpon>Servicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiciosGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiciosGeneral.Designer.cs">
+      <DependentUpon>ServiciosGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaccion.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="Validar.cs" />
+    <Compile Include="Vehiculo.cs" />
+    <Compile Include="Vehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehiculos.Designer.cs">
+      <DependentUpon>Vehiculos.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MetodPago.resx">
+      <DependentUpon>MetodPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetallesVehiculo.resx">
+      <DependentUpon>DetallesVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PerfilUsuario.resx">
+      <DependentUpon>PerfilUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +149,13 @@
     <EmbeddedResource Include="RestablecerPassword.resx">
       <DependentUpon>RestablecerPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ServiciosGeneral.resx">
+      <DependentUpon>ServiciosGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehiculos.resx">
+      <DependentUpon>Vehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,6 +171,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carros.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inmuebles.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\servicios.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
