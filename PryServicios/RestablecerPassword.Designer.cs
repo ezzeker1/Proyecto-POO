@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.GBRestablecerPass = new System.Windows.Forms.GroupBox();
+            this.BtnValidar = new System.Windows.Forms.Button();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.lblReingresarPass = new System.Windows.Forms.Label();
+            this.txtReingresarNuevaPass = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblNuevaPass = new System.Windows.Forms.Label();
             this.txtNuevaPass = new System.Windows.Forms.TextBox();
             this.txtRespuestaSecreta = new System.Windows.Forms.TextBox();
             this.btnRestablecer = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblReingresarPass = new System.Windows.Forms.Label();
-            this.txtReingresarNuevaPass = new System.Windows.Forms.TextBox();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.lblEdad = new System.Windows.Forms.Label();
-            this.BtnValidar = new System.Windows.Forms.Button();
             this.GBRestablecerPass.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +61,61 @@
             this.GBRestablecerPass.TabStop = false;
             this.GBRestablecerPass.Text = "Pregunta Secreta";
             // 
+            // BtnValidar
+            // 
+            this.BtnValidar.Location = new System.Drawing.Point(116, 155);
+            this.BtnValidar.Name = "BtnValidar";
+            this.BtnValidar.Size = new System.Drawing.Size(115, 31);
+            this.BtnValidar.TabIndex = 11;
+            this.BtnValidar.Text = "Validar";
+            this.BtnValidar.UseVisualStyleBackColor = true;
+            this.BtnValidar.Click += new System.EventHandler(this.BtnValidar_Click);
+            // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdad.Location = new System.Drawing.Point(14, 106);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(134, 18);
+            this.lblEdad.TabIndex = 10;
+            this.lblEdad.Text = "Ingrese Su edad:";
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Location = new System.Drawing.Point(154, 107);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(171, 20);
+            this.txtEdad.TabIndex = 9;
+            // 
+            // lblReingresarPass
+            // 
+            this.lblReingresarPass.AutoSize = true;
+            this.lblReingresarPass.Location = new System.Drawing.Point(26, 254);
+            this.lblReingresarPass.Name = "lblReingresarPass";
+            this.lblReingresarPass.Size = new System.Drawing.Size(153, 13);
+            this.lblReingresarPass.TabIndex = 8;
+            this.lblReingresarPass.Text = "Reingresar Nueva Contraseña:";
+            this.lblReingresarPass.Click += new System.EventHandler(this.lblReingresarPass_Click);
+            // 
+            // txtReingresarNuevaPass
+            // 
+            this.txtReingresarNuevaPass.Location = new System.Drawing.Point(185, 247);
+            this.txtReingresarNuevaPass.Name = "txtReingresarNuevaPass";
+            this.txtReingresarNuevaPass.Size = new System.Drawing.Size(100, 20);
+            this.txtReingresarNuevaPass.TabIndex = 7;
+            this.txtReingresarNuevaPass.TextChanged += new System.EventHandler(this.txtReingresarNuevaPass_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(328, 18);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Cual es el nombre de tu primera mascota?";
+            // 
             // lblNuevaPass
             // 
             this.lblNuevaPass.AutoSize = true;
@@ -69,6 +124,7 @@
             this.lblNuevaPass.Size = new System.Drawing.Size(99, 13);
             this.lblNuevaPass.TabIndex = 5;
             this.lblNuevaPass.Text = "Nueva Contraseña:";
+            this.lblNuevaPass.Click += new System.EventHandler(this.lblNuevaPass_Click);
             // 
             // txtNuevaPass
             // 
@@ -76,6 +132,7 @@
             this.txtNuevaPass.Name = "txtNuevaPass";
             this.txtNuevaPass.Size = new System.Drawing.Size(100, 20);
             this.txtNuevaPass.TabIndex = 4;
+            this.txtNuevaPass.TextChanged += new System.EventHandler(this.txtNuevaPass_TextChanged);
             // 
             // txtRespuestaSecreta
             // 
@@ -93,58 +150,6 @@
             this.btnRestablecer.Text = "Restablecer";
             this.btnRestablecer.UseVisualStyleBackColor = true;
             this.btnRestablecer.Click += new System.EventHandler(this.btnRestablecer_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 18);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Cual es el nombre de tu primera mascota?";
-            // 
-            // lblReingresarPass
-            // 
-            this.lblReingresarPass.AutoSize = true;
-            this.lblReingresarPass.Location = new System.Drawing.Point(26, 254);
-            this.lblReingresarPass.Name = "lblReingresarPass";
-            this.lblReingresarPass.Size = new System.Drawing.Size(153, 13);
-            this.lblReingresarPass.TabIndex = 8;
-            this.lblReingresarPass.Text = "Reingresar Nueva Contraseña:";
-            // 
-            // txtReingresarNuevaPass
-            // 
-            this.txtReingresarNuevaPass.Location = new System.Drawing.Point(185, 247);
-            this.txtReingresarNuevaPass.Name = "txtReingresarNuevaPass";
-            this.txtReingresarNuevaPass.Size = new System.Drawing.Size(100, 20);
-            this.txtReingresarNuevaPass.TabIndex = 7;
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Location = new System.Drawing.Point(154, 107);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(171, 20);
-            this.txtEdad.TabIndex = 9;
-            // 
-            // lblEdad
-            // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(14, 106);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(134, 18);
-            this.lblEdad.TabIndex = 10;
-            this.lblEdad.Text = "Ingrese Su edad:";
-            // 
-            // BtnValidar
-            // 
-            this.BtnValidar.Location = new System.Drawing.Point(116, 155);
-            this.BtnValidar.Name = "BtnValidar";
-            this.BtnValidar.Size = new System.Drawing.Size(115, 31);
-            this.BtnValidar.TabIndex = 11;
-            this.BtnValidar.Text = "button1";
-            this.BtnValidar.UseVisualStyleBackColor = true;
             // 
             // RestablecerPassword
             // 
