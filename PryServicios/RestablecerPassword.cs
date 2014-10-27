@@ -95,7 +95,6 @@ namespace PryServicios
                 }
                 else {
                     v_resultado = 2;
-                    //MessageBox.Show("Los datos ingresados son erroneos, deben de ser correctos para proceder","Mensaje de Serviful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             if (v_resultado == 2) {

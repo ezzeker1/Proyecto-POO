@@ -18,22 +18,23 @@ namespace PryServicios
             lblMUsuario.Hide();
         }
 
-        private string _user;
-        private int v_posicion = 0;
+        private string _user;  // ALmacena al Usuario
+        private int v_posicion = 0; // Almaena la posicion del usuario en el Arreglo
+
         //Metodos GET y SET para Obtener el Usuario
-        public string vuser
+        public string vuser  //Metodo que Permite Obtener el Usuario 
         {
             get { return _user; }
             set { _user = value; }
         }
 
-        private void ModificarUsuario_Load(object sender, EventArgs e)
+        private void ModificarUsuario_Load(object sender, EventArgs e)  //Asignar valores en la carga del Form
         {
-            lblMUsuario.Text = vuser;
+            lblMUsuario.Text = vuser; //El metodo devuelve el valor y lo asigna al Label de Usuario
 
             for (int i = 0; i <= Usuario.V_Contador; i++)
             {
-                if (lblMUsuario.Text == Usuario.A_Usuario[i])
+                if (lblMUsuario.Text == Usuario.A_Usuario[i]) //Carga los datos si el usuario existe en el Arreglo
                 {
                     v_posicion = i;
                     txtApellidos.Text = Usuario.A_Apellidos[i];
@@ -50,7 +51,7 @@ namespace PryServicios
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-
+            //Actualizar los valores para ese usuario.
             Usuario.A_Usuario[v_posicion] = txtUsuairo.Text;
             Usuario.A_Apellidos[v_posicion] = txtApellidos.Text;
             Usuario.A_Edad[v_posicion] = Int32.Parse(txtEdad.Text);

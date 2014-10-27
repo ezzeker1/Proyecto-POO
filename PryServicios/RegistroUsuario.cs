@@ -19,6 +19,9 @@ namespace PryServicios
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+            //================================================================================
+            //========================== Declaración de Variables ============================
+            //================================================================================
             string v_usuario = "";
             int v_resultado = 0, v_tusuario = 2,
                 v_C_Usuario = 0,
@@ -29,7 +32,10 @@ namespace PryServicios
                 v_C_Password = 0,
                 v_C_Respuesta = 0,
                 v_C_Edad = 0;
-
+          
+            //================================================================================
+            //========================== Asignación de Variables =============================
+            //================================================================================
             v_C_Usuario = txtUsuairo.TextLength;
             v_C_Nombre = txtNombres.TextLength;
             v_C_Apellido = txtApellidos.TextLength;
@@ -38,6 +44,11 @@ namespace PryServicios
             v_C_Password = txtPassword.TextLength;
             v_C_Edad = txtEdad.TextLength;
             v_C_Respuesta = txtRespuesta.TextLength;
+
+
+            //================================================================================
+            //=============================== Validaciones ===================================
+            //================================================================================
 
             if (v_C_Usuario == 0) {
                 MessageBox.Show("Es Obligatorio Completar el usuario para seguir con el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -55,7 +66,7 @@ namespace PryServicios
                 MessageBox.Show("Es obligatorio ingresar el Email para seguir con el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (v_C_Password == 0) {
-                MessageBox.Show("Es obligatorio ingresar una contraseña para proceder", "Mensaje de ServifUll", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Es obligatorio ingresar una contraseña para proceder", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (v_C_Edad == 0) {
                 MessageBox.Show("Debe ingresar su Edad para proceder con el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -65,18 +76,18 @@ namespace PryServicios
                 MessageBox.Show("Debe responder a la pregunta secreta para finalizar el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else {
-
+                 // Si paso las Valicaciones anteriores Comienza el proceso de Registro
                 v_usuario = txtUsuairo.Text.ToLower();
 
-                for (int i = 0; i < Usuario.V_Contador; i++)
+                for (int i = 0; i < Usuario.V_Contador; i++) //Este For Recorre el Arreglo de Usuarios tomando como limite el contador de la clase Usuarios
                 {
-                    if (Usuario.A_Usuario[i] == v_usuario)
+                    if (Usuario.A_Usuario[i] == v_usuario) //Busca Si ya existe en el sistema el usuario que se ha ingresado
                     {
                         v_resultado = 1;
                     }
                     else v_resultado = 2;
                 }
-                if (v_resultado == 2)
+                if (v_resultado == 2)  //Si el usuario no existe, ingresa.....
                 {
                     Usuario.A_Usuario[Usuario.V_Contador] = txtUsuairo.Text.ToLower();
                     Usuario.A_Password[Usuario.V_Contador] = txtPassword.Text;
@@ -93,7 +104,7 @@ namespace PryServicios
                                     "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-                else
+                else  //Si el usuario Si existe Me muestra el siguiente mensaje.
                 {
                     MessageBox.Show("El usuario " + v_usuario + " Ya se encuentra registrado en el sitema, ingrese uno diferente",
                                     "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);

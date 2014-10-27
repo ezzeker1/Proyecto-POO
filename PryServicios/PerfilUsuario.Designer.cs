@@ -59,14 +59,33 @@
             this.lblNTipo = new System.Windows.Forms.Label();
             this.lblSeleccion = new System.Windows.Forms.Label();
             this.btnMPago = new System.Windows.Forms.Button();
+            this.GBFacturacion = new System.Windows.Forms.GroupBox();
+            this.lblDistrito = new System.Windows.Forms.Label();
+            this.CBFSeleccionar = new System.Windows.Forms.ComboBox();
+            this.lblFSeleccionar = new System.Windows.Forms.Label();
+            this.btnFModificar = new System.Windows.Forms.Button();
+            this.btnFRegistrar = new System.Windows.Forms.Button();
+            this.lblResDepartamento = new System.Windows.Forms.Label();
+            this.lblDepartamento = new System.Windows.Forms.Label();
+            this.lblResProvincia = new System.Windows.Forms.Label();
+            this.lblResPais = new System.Windows.Forms.Label();
+            this.lblResDireccion = new System.Windows.Forms.Label();
+            this.lblProvincia = new System.Windows.Forms.Label();
+            this.lblPais = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblResdistrito = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.GBUsuario.SuspendLayout();
             this.GBPago.SuspendLayout();
+            this.GBFacturacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(528, 12);
+            this.lblUsuario.Location = new System.Drawing.Point(755, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(46, 13);
             this.lblUsuario.TabIndex = 0;
@@ -75,7 +94,7 @@
             // lblResUsuario
             // 
             this.lblResUsuario.AutoSize = true;
-            this.lblResUsuario.Location = new System.Drawing.Point(580, 12);
+            this.lblResUsuario.Location = new System.Drawing.Point(807, 9);
             this.lblResUsuario.Name = "lblResUsuario";
             this.lblResUsuario.Size = new System.Drawing.Size(58, 13);
             this.lblResUsuario.TabIndex = 1;
@@ -98,7 +117,7 @@
             this.GBUsuario.Controls.Add(this.lblResDUsuario);
             this.GBUsuario.Controls.Add(this.lblDUsuario);
             this.GBUsuario.Controls.Add(this.btnMUsuario);
-            this.GBUsuario.Location = new System.Drawing.Point(35, 56);
+            this.GBUsuario.Location = new System.Drawing.Point(21, 38);
             this.GBUsuario.Name = "GBUsuario";
             this.GBUsuario.Size = new System.Drawing.Size(254, 293);
             this.GBUsuario.TabIndex = 2;
@@ -255,9 +274,9 @@
             this.GBPago.Controls.Add(this.lblNTipo);
             this.GBPago.Controls.Add(this.lblSeleccion);
             this.GBPago.Controls.Add(this.btnMPago);
-            this.GBPago.Location = new System.Drawing.Point(358, 56);
+            this.GBPago.Location = new System.Drawing.Point(300, 38);
             this.GBPago.Name = "GBPago";
-            this.GBPago.Size = new System.Drawing.Size(269, 221);
+            this.GBPago.Size = new System.Drawing.Size(269, 206);
             this.GBPago.TabIndex = 3;
             this.GBPago.TabStop = false;
             this.GBPago.Text = "Metodos de Pago Registrados";
@@ -275,7 +294,7 @@
             // lblResproveedor
             // 
             this.lblResproveedor.AutoSize = true;
-            this.lblResproveedor.Location = new System.Drawing.Point(76, 101);
+            this.lblResproveedor.Location = new System.Drawing.Point(86, 101);
             this.lblResproveedor.Name = "lblResproveedor";
             this.lblResproveedor.Size = new System.Drawing.Size(55, 13);
             this.lblResproveedor.TabIndex = 11;
@@ -284,7 +303,7 @@
             // lblProveedor
             // 
             this.lblProveedor.AutoSize = true;
-            this.lblProveedor.Location = new System.Drawing.Point(11, 101);
+            this.lblProveedor.Location = new System.Drawing.Point(21, 101);
             this.lblProveedor.Name = "lblProveedor";
             this.lblProveedor.Size = new System.Drawing.Size(59, 13);
             this.lblProveedor.TabIndex = 10;
@@ -293,7 +312,7 @@
             // lblResVencimiento
             // 
             this.lblResVencimiento.AutoSize = true;
-            this.lblResVencimiento.Location = new System.Drawing.Point(76, 174);
+            this.lblResVencimiento.Location = new System.Drawing.Point(86, 174);
             this.lblResVencimiento.Name = "lblResVencimiento";
             this.lblResVencimiento.Size = new System.Drawing.Size(52, 13);
             this.lblResVencimiento.TabIndex = 9;
@@ -302,7 +321,7 @@
             // lblVencimiento
             // 
             this.lblVencimiento.AutoSize = true;
-            this.lblVencimiento.Location = new System.Drawing.Point(2, 174);
+            this.lblVencimiento.Location = new System.Drawing.Point(12, 174);
             this.lblVencimiento.Name = "lblVencimiento";
             this.lblVencimiento.Size = new System.Drawing.Size(68, 13);
             this.lblVencimiento.TabIndex = 8;
@@ -311,7 +330,7 @@
             // CBSeleccion
             // 
             this.CBSeleccion.FormattingEnabled = true;
-            this.CBSeleccion.Location = new System.Drawing.Point(65, 64);
+            this.CBSeleccion.Location = new System.Drawing.Point(101, 67);
             this.CBSeleccion.Name = "CBSeleccion";
             this.CBSeleccion.Size = new System.Drawing.Size(151, 21);
             this.CBSeleccion.TabIndex = 7;
@@ -320,7 +339,7 @@
             // lblResTitular
             // 
             this.lblResTitular.AutoSize = true;
-            this.lblResTitular.Location = new System.Drawing.Point(76, 147);
+            this.lblResTitular.Location = new System.Drawing.Point(86, 147);
             this.lblResTitular.Name = "lblResTitular";
             this.lblResTitular.Size = new System.Drawing.Size(52, 13);
             this.lblResTitular.TabIndex = 6;
@@ -329,7 +348,7 @@
             // lblTitular
             // 
             this.lblTitular.AutoSize = true;
-            this.lblTitular.Location = new System.Drawing.Point(31, 147);
+            this.lblTitular.Location = new System.Drawing.Point(41, 147);
             this.lblTitular.Name = "lblTitular";
             this.lblTitular.Size = new System.Drawing.Size(39, 13);
             this.lblTitular.TabIndex = 5;
@@ -338,7 +357,7 @@
             // lblResTipo
             // 
             this.lblResTipo.AutoSize = true;
-            this.lblResTipo.Location = new System.Drawing.Point(76, 124);
+            this.lblResTipo.Location = new System.Drawing.Point(86, 124);
             this.lblResTipo.Name = "lblResTipo";
             this.lblResTipo.Size = new System.Drawing.Size(55, 13);
             this.lblResTipo.TabIndex = 4;
@@ -347,7 +366,7 @@
             // lblNTipo
             // 
             this.lblNTipo.AutoSize = true;
-            this.lblNTipo.Location = new System.Drawing.Point(42, 124);
+            this.lblNTipo.Location = new System.Drawing.Point(52, 124);
             this.lblNTipo.Name = "lblNTipo";
             this.lblNTipo.Size = new System.Drawing.Size(31, 13);
             this.lblNTipo.TabIndex = 3;
@@ -356,9 +375,10 @@
             // lblSeleccion
             // 
             this.lblSeleccion.AutoSize = true;
-            this.lblSeleccion.Location = new System.Drawing.Point(11, 67);
+            this.lblSeleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSeleccion.Location = new System.Drawing.Point(23, 67);
             this.lblSeleccion.Name = "lblSeleccion";
-            this.lblSeleccion.Size = new System.Drawing.Size(57, 13);
+            this.lblSeleccion.Size = new System.Drawing.Size(72, 16);
             this.lblSeleccion.TabIndex = 1;
             this.lblSeleccion.Text = "Selecione:";
             // 
@@ -370,12 +390,184 @@
             this.btnMPago.TabIndex = 0;
             this.btnMPago.Text = "Modificar";
             this.btnMPago.UseVisualStyleBackColor = true;
+            this.btnMPago.Click += new System.EventHandler(this.btnMPago_Click);
+            // 
+            // GBFacturacion
+            // 
+            this.GBFacturacion.Controls.Add(this.lblResdistrito);
+            this.GBFacturacion.Controls.Add(this.lblDistrito);
+            this.GBFacturacion.Controls.Add(this.CBFSeleccionar);
+            this.GBFacturacion.Controls.Add(this.lblFSeleccionar);
+            this.GBFacturacion.Controls.Add(this.btnFModificar);
+            this.GBFacturacion.Controls.Add(this.btnFRegistrar);
+            this.GBFacturacion.Controls.Add(this.lblResDepartamento);
+            this.GBFacturacion.Controls.Add(this.lblDepartamento);
+            this.GBFacturacion.Controls.Add(this.lblResProvincia);
+            this.GBFacturacion.Controls.Add(this.lblResPais);
+            this.GBFacturacion.Controls.Add(this.lblResDireccion);
+            this.GBFacturacion.Controls.Add(this.lblProvincia);
+            this.GBFacturacion.Controls.Add(this.lblPais);
+            this.GBFacturacion.Controls.Add(this.lblDireccion);
+            this.GBFacturacion.Location = new System.Drawing.Point(596, 38);
+            this.GBFacturacion.Name = "GBFacturacion";
+            this.GBFacturacion.Size = new System.Drawing.Size(269, 249);
+            this.GBFacturacion.TabIndex = 4;
+            this.GBFacturacion.TabStop = false;
+            this.GBFacturacion.Text = "Información para la Facturación";
+            // 
+            // lblDistrito
+            // 
+            this.lblDistrito.AutoSize = true;
+            this.lblDistrito.Location = new System.Drawing.Point(41, 180);
+            this.lblDistrito.Name = "lblDistrito";
+            this.lblDistrito.Size = new System.Drawing.Size(42, 13);
+            this.lblDistrito.TabIndex = 14;
+            this.lblDistrito.Text = "Distrito:";
+            // 
+            // CBFSeleccionar
+            // 
+            this.CBFSeleccionar.FormattingEnabled = true;
+            this.CBFSeleccionar.Location = new System.Drawing.Point(106, 64);
+            this.CBFSeleccionar.Name = "CBFSeleccionar";
+            this.CBFSeleccionar.Size = new System.Drawing.Size(147, 21);
+            this.CBFSeleccionar.TabIndex = 13;
+            // 
+            // lblFSeleccionar
+            // 
+            this.lblFSeleccionar.AutoSize = true;
+            this.lblFSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFSeleccionar.Location = new System.Drawing.Point(18, 65);
+            this.lblFSeleccionar.Name = "lblFSeleccionar";
+            this.lblFSeleccionar.Size = new System.Drawing.Size(83, 16);
+            this.lblFSeleccionar.TabIndex = 12;
+            this.lblFSeleccionar.Text = "Seleccionar:";
+            // 
+            // btnFModificar
+            // 
+            this.btnFModificar.Location = new System.Drawing.Point(187, 19);
+            this.btnFModificar.Name = "btnFModificar";
+            this.btnFModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnFModificar.TabIndex = 11;
+            this.btnFModificar.Text = "Modificar";
+            this.btnFModificar.UseVisualStyleBackColor = true;
+            // 
+            // btnFRegistrar
+            // 
+            this.btnFRegistrar.Location = new System.Drawing.Point(106, 20);
+            this.btnFRegistrar.Name = "btnFRegistrar";
+            this.btnFRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnFRegistrar.TabIndex = 10;
+            this.btnFRegistrar.Text = "Registrar";
+            this.btnFRegistrar.UseVisualStyleBackColor = true;
+            this.btnFRegistrar.Click += new System.EventHandler(this.btnFRegistrar_Click);
+            // 
+            // lblResDepartamento
+            // 
+            this.lblResDepartamento.AutoSize = true;
+            this.lblResDepartamento.Location = new System.Drawing.Point(89, 129);
+            this.lblResDepartamento.Name = "lblResDepartamento";
+            this.lblResDepartamento.Size = new System.Drawing.Size(85, 13);
+            this.lblResDepartamento.TabIndex = 9;
+            this.lblResDepartamento.Text = "..........................";
+            // 
+            // lblDepartamento
+            // 
+            this.lblDepartamento.AutoSize = true;
+            this.lblDepartamento.Location = new System.Drawing.Point(8, 129);
+            this.lblDepartamento.Name = "lblDepartamento";
+            this.lblDepartamento.Size = new System.Drawing.Size(77, 13);
+            this.lblDepartamento.TabIndex = 8;
+            this.lblDepartamento.Text = "Departamento:";
+            // 
+            // lblResProvincia
+            // 
+            this.lblResProvincia.AutoSize = true;
+            this.lblResProvincia.Location = new System.Drawing.Point(87, 153);
+            this.lblResProvincia.Name = "lblResProvincia";
+            this.lblResProvincia.Size = new System.Drawing.Size(88, 13);
+            this.lblResProvincia.TabIndex = 7;
+            this.lblResProvincia.Text = "...........................";
+            // 
+            // lblResPais
+            // 
+            this.lblResPais.AutoSize = true;
+            this.lblResPais.Location = new System.Drawing.Point(87, 101);
+            this.lblResPais.Name = "lblResPais";
+            this.lblResPais.Size = new System.Drawing.Size(88, 13);
+            this.lblResPais.TabIndex = 6;
+            this.lblResPais.Text = "...........................";
+            // 
+            // lblResDireccion
+            // 
+            this.lblResDireccion.AutoSize = true;
+            this.lblResDireccion.Location = new System.Drawing.Point(87, 210);
+            this.lblResDireccion.Name = "lblResDireccion";
+            this.lblResDireccion.Size = new System.Drawing.Size(151, 13);
+            this.lblResDireccion.TabIndex = 5;
+            this.lblResDireccion.Text = "................................................";
+            // 
+            // lblProvincia
+            // 
+            this.lblProvincia.AutoSize = true;
+            this.lblProvincia.Location = new System.Drawing.Point(29, 153);
+            this.lblProvincia.Name = "lblProvincia";
+            this.lblProvincia.Size = new System.Drawing.Size(54, 13);
+            this.lblProvincia.TabIndex = 4;
+            this.lblProvincia.Text = "Provincia:";
+            // 
+            // lblPais
+            // 
+            this.lblPais.AutoSize = true;
+            this.lblPais.Location = new System.Drawing.Point(53, 101);
+            this.lblPais.Name = "lblPais";
+            this.lblPais.Size = new System.Drawing.Size(30, 13);
+            this.lblPais.TabIndex = 1;
+            this.lblPais.Text = "Pais:";
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(28, 210);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(55, 13);
+            this.lblDireccion.TabIndex = 0;
+            this.lblDireccion.Text = "Dirección:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 414);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(810, 148);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // lblResdistrito
+            // 
+            this.lblResdistrito.AutoSize = true;
+            this.lblResdistrito.Location = new System.Drawing.Point(89, 180);
+            this.lblResdistrito.Name = "lblResdistrito";
+            this.lblResdistrito.Size = new System.Drawing.Size(88, 13);
+            this.lblResdistrito.TabIndex = 15;
+            this.lblResdistrito.Text = "...........................";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 380);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(253, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Historial de Adquisiciones";
             // 
             // PerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 583);
+            this.ClientSize = new System.Drawing.Size(879, 583);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GBFacturacion);
             this.Controls.Add(this.GBPago);
             this.Controls.Add(this.GBUsuario);
             this.Controls.Add(this.lblResUsuario);
@@ -387,6 +579,9 @@
             this.GBUsuario.PerformLayout();
             this.GBPago.ResumeLayout(false);
             this.GBPago.PerformLayout();
+            this.GBFacturacion.ResumeLayout(false);
+            this.GBFacturacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,5 +620,22 @@
         private System.Windows.Forms.Label lblResproveedor;
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.GroupBox GBFacturacion;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblPais;
+        private System.Windows.Forms.Button btnFModificar;
+        private System.Windows.Forms.Button btnFRegistrar;
+        private System.Windows.Forms.Label lblResDepartamento;
+        private System.Windows.Forms.Label lblDepartamento;
+        private System.Windows.Forms.Label lblResProvincia;
+        private System.Windows.Forms.Label lblResPais;
+        private System.Windows.Forms.Label lblResDireccion;
+        private System.Windows.Forms.Label lblProvincia;
+        private System.Windows.Forms.Label lblDistrito;
+        private System.Windows.Forms.ComboBox CBFSeleccionar;
+        private System.Windows.Forms.Label lblFSeleccionar;
+        private System.Windows.Forms.Label lblResdistrito;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -36,7 +36,7 @@ namespace PryServicios
             for (int i = 0; i <= Tarjeta.V_Contador; i++)
             {
                 if (Tarjeta.A_usuario[i] == lblResUsuario.Text) {
-                    CBSeleccion.Items.Add(Tarjeta.A_usuario[i]);
+                    CBSeleccion.Items.Add(Tarjeta.A_numero[i]);
                 }
             }
                 if (v_posicion > -1)
@@ -49,17 +49,17 @@ namespace PryServicios
                     lblResPregunta.Text = Usuario.A_PreguntaSecreta[v_posicion];
                     lblResEdad.Text = Usuario.A_Edad[v_posicion].ToString();
                 }
-
-        }
+          }
 
         private void CBSeleccion_SelectedIndexChanged(object sender, EventArgs e)
         {
             
 
             for (int i = 0; i <= Tarjeta.V_Contador; i++) {
-                if (CBSeleccion.Text == Tarjeta.A_numero.ToString()) {
+                if (CBSeleccion.Text == Tarjeta.A_numero[i])
+                {
                     lblResTitular.Text = Tarjeta.A_Titular[i];
-                    lblResVencimiento.Text = Tarjeta.A_Mes[i].ToString() + "/" + Tarjeta.A_Anio[i].ToString();
+                    lblResVencimiento.Text = Tarjeta.A_Mes[i] + "/" + Tarjeta.A_Anio[i];
                     lblResproveedor.Text = Tarjeta.A_Proveedor[i];
                     lblResTipo.Text = Tarjeta.A_Tipo[i];
                 }
@@ -70,16 +70,30 @@ namespace PryServicios
         private void btnMUsuario_Click(object sender, EventArgs e)
         {
             ModificarUsuario ObjModificarUsuario = new ModificarUsuario();
-
             ObjModificarUsuario.vuser = lblResUsuario.Text;
-
             ObjModificarUsuario.Show();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             RegistrarMetodoPago ObjMetodoPago = new RegistrarMetodoPago();
+            ObjMetodoPago.vuser = lblResUsuario.Text;
             ObjMetodoPago.Show();
         }
+
+        private void btnMPago_Click(object sender, EventArgs e)
+        {
+            ModificarMetodoPago ObjMMetodoPago = new ModificarMetodoPago();
+            ObjMMetodoPago.vuser = lblResUsuario.Text;
+            ObjMMetodoPago.Show();
+        }
+
+        private void btnFRegistrar_Click(object sender, EventArgs e)
+        {
+            RegistrarInfoFacturacion OBjInfoFacturacion = new RegistrarInfoFacturacion();
+            OBjInfoFacturacion.vuser = lblResUsuario.Text;
+            OBjInfoFacturacion.Show();
+        }
+
     }
 }

@@ -26,9 +26,9 @@ namespace PryServicios
             set { _user = value; }
         }
 
-
         private void RegistrarMetodoPago_Load(object sender, EventArgs e)
         {
+            lblUsuario.Text = vuser;
             CBTipo.Items.Add("Debito");
             CBTipo.Items.Add("Credito");
             CBProveedor.Items.Add("Visa");
@@ -38,16 +38,20 @@ namespace PryServicios
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            lblUsuario.Text = vuser;
-            Tarjeta.RegistrarTarjeta(txtNTarjeta.Text,txtAnio.Text, txtMes.Text, txtTitular.Text, 
-                                     CBProveedor.SelectedText, CBTipo.SelectedText, lblUsuario.Text);
-            //Tarjeta.A_Anio[Tarjeta.V_Contador] = txtAnio.Text;
-            //Tarjeta.A_Mes[Tarjeta.V_Contador] = txtMes.Text;
-            //Tarjeta.A_numero[Tarjeta.V_Contador] = txtNTarjeta.Text;
-            //Tarjeta.A_Proveedor[Tarjeta.V_Contador] = CBProveedor.SelectedText;
-            //Tarjeta.A_Tipo[Tarjeta.V_Contador] = CBTipo.SelectedText;
-            MessageBox.Show("Se registro la tarjeta con N° " + txtNTarjeta.Text + " Como metodo de pago", "Mensaje de SeviFull", MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            Tarjeta.A_Anio[Tarjeta.V_Contador] = txtAnio.Text;
+            Tarjeta.A_Mes[Tarjeta.V_Contador] = txtMes.Text;
+            Tarjeta.A_numero[Tarjeta.V_Contador] = txtNTarjeta.Text;
+            Tarjeta.A_Proveedor[Tarjeta.V_Contador] = CBProveedor.Text;
+            Tarjeta.A_Tipo[Tarjeta.V_Contador] = CBTipo.Text;
+            Tarjeta.A_usuario[Tarjeta.V_Contador] = lblUsuario.Text;
+            Tarjeta.A_Titular[Tarjeta.V_Contador] = txtTitular.Text;
+            Tarjeta.V_Contador++;
+           
+            MessageBox.Show("Se registro la tarjeta con N° " + txtNTarjeta.Text + " Como metodo de pago", 
+                             "Mensaje de SeviFull", MessageBoxButtons.OK,MessageBoxIcon.Information);
+            this.Close();
         }
+
+       
     }
 }

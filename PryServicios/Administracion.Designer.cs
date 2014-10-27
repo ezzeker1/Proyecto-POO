@@ -36,12 +36,19 @@
             this.c4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GBUsuario = new System.Windows.Forms.GroupBox();
+            this.btnPermisos = new System.Windows.Forms.Button();
+            this.GBAdministrativo = new System.Windows.Forms.GroupBox();
+            this.btnLog = new System.Windows.Forms.Button();
+            this.btnCrear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.GBUsuario.SuspendLayout();
+            this.GBAdministrativo.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(69, 56);
+            this.btnListar.Location = new System.Drawing.Point(33, 239);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
             this.btnListar.TabIndex = 0;
@@ -59,7 +66,7 @@
             this.c4,
             this.c5,
             this.c6});
-            this.dataGridView1.Location = new System.Drawing.Point(30, 269);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 288);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(646, 180);
             this.dataGridView1.TabIndex = 1;
@@ -94,16 +101,68 @@
             this.c6.HeaderText = "Password";
             this.c6.Name = "c6";
             // 
+            // GBUsuario
+            // 
+            this.GBUsuario.Controls.Add(this.btnCrear);
+            this.GBUsuario.Location = new System.Drawing.Point(21, 22);
+            this.GBUsuario.Name = "GBUsuario";
+            this.GBUsuario.Size = new System.Drawing.Size(300, 177);
+            this.GBUsuario.TabIndex = 2;
+            this.GBUsuario.TabStop = false;
+            this.GBUsuario.Text = "Acciones para los Usuarios";
+            // 
+            // btnPermisos
+            // 
+            this.btnPermisos.Location = new System.Drawing.Point(115, 28);
+            this.btnPermisos.Name = "btnPermisos";
+            this.btnPermisos.Size = new System.Drawing.Size(114, 23);
+            this.btnPermisos.TabIndex = 0;
+            this.btnPermisos.Text = "Modificar Permisos";
+            this.btnPermisos.UseVisualStyleBackColor = true;
+            // 
+            // GBAdministrativo
+            // 
+            this.GBAdministrativo.Controls.Add(this.btnPermisos);
+            this.GBAdministrativo.Controls.Add(this.btnLog);
+            this.GBAdministrativo.Location = new System.Drawing.Point(414, 22);
+            this.GBAdministrativo.Name = "GBAdministrativo";
+            this.GBAdministrativo.Size = new System.Drawing.Size(253, 177);
+            this.GBAdministrativo.TabIndex = 3;
+            this.GBAdministrativo.TabStop = false;
+            this.GBAdministrativo.Text = "Funciones Administrativas";
+            // 
+            // btnLog
+            // 
+            this.btnLog.Location = new System.Drawing.Point(16, 28);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Size = new System.Drawing.Size(75, 23);
+            this.btnLog.TabIndex = 0;
+            this.btnLog.Text = "Log";
+            this.btnLog.UseVisualStyleBackColor = true;
+            // 
+            // btnCrear
+            // 
+            this.btnCrear.Location = new System.Drawing.Point(12, 27);
+            this.btnCrear.Name = "btnCrear";
+            this.btnCrear.Size = new System.Drawing.Size(93, 23);
+            this.btnCrear.TabIndex = 0;
+            this.btnCrear.Text = "Crear Usuario";
+            this.btnCrear.UseVisualStyleBackColor = true;
+            // 
             // Administracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 491);
+            this.ClientSize = new System.Drawing.Size(688, 491);
+            this.Controls.Add(this.GBAdministrativo);
+            this.Controls.Add(this.GBUsuario);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnListar);
             this.Name = "Administracion";
             this.Text = "Administracion";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.GBUsuario.ResumeLayout(false);
+            this.GBAdministrativo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -118,5 +177,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn c4;
         private System.Windows.Forms.DataGridViewTextBoxColumn c5;
         private System.Windows.Forms.DataGridViewTextBoxColumn c6;
+        private System.Windows.Forms.GroupBox GBUsuario;
+        private System.Windows.Forms.Button btnCrear;
+        private System.Windows.Forms.Button btnPermisos;
+        private System.Windows.Forms.GroupBox GBAdministrativo;
+        private System.Windows.Forms.Button btnLog;
     }
 }
