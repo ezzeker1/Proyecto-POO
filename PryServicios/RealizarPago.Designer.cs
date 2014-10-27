@@ -1,6 +1,6 @@
 ﻿namespace PryServicios
 {
-    partial class MetodPago
+    partial class RealizarPago
     {
         /// <summary>
         /// Required designer variable.

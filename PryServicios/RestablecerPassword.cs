@@ -22,26 +22,25 @@ namespace PryServicios
             txtReingresarNuevaPass.Hide();
         }
 
+        int v_ubicacion = 0;
+
         private void btnRestablecer_Click(object sender, EventArgs e)
         {
             string v_respuesta = "";
+            int v_edad = 0;
 
             v_respuesta = txtRespuestaSecreta.Text;
+            v_edad = Int32.Parse(txtEdad.Text);
 
-            for (int i = 0; i < Usuario.V_Contador; i++){
-                 if(v_respuesta == Usuario.A_PreguntaSecreta[i]){
-                     if (txtReingresarNuevaPass.Text == txtNuevaPass.Text)
-                     {
-                         Usuario.A_Password[i] = txtNuevaPass.Text;
-                         
-                     }
-                     else
-                     {
-                         MessageBox.Show("Las contraseñas ingresadas no coinciden", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                     }
-                     break;
-                 }
-            }
+           if (txtReingresarNuevaPass.Text == txtNuevaPass.Text)
+           {
+               Usuario.A_Password[v_ubicacion] = txtNuevaPass.Text;
+               MessageBox.Show("Se modifico la contraseña Correctamente", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           }
+           else
+           {
+               MessageBox.Show("Las contraseñas ingresadas no coinciden", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+           }
             
         }
 
@@ -67,25 +66,45 @@ namespace PryServicios
 
         private void BtnValidar_Click(object sender, EventArgs e)
         {
-            string v_respuesta = "";
-            int v_edad = 0;
+            Validar ObjValidar = new Validar();
 
-            v_respuesta = txtRespuestaSecreta.Text;
+            string v_respuesta = "", v_usuario = "";
+            int v_edad = 0, v_resultado = 0,
+                v_C_usuario = 0;
+
+            v_respuesta = txtRespuestaSecreta.Text.ToLower();
             v_edad = Int32.Parse(txtEdad.Text);
+            v_usuario = txtUsuario.Text.ToLower();
 
+            v_C_usuario = ObjValidar.ValidarSiexisteUsuario(v_usuario);
+
+            if (v_C_usuario == 1) 
+            { 
             for (int i = 0; i < Usuario.V_Contador; i++)
             {
-                if (v_respuesta == Usuario.A_PreguntaSecreta[i] && v_edad == Usuario.A_Edad[i])
+                if (v_respuesta == Usuario.A_PreguntaSecreta[i] && v_edad == Usuario.A_Edad[i] && v_usuario == Usuario.A_Usuario[i])
                 {
-                   
-                  Usuario.A_Password[i] = txtNuevaPass.Text;
-                  break;
+                    lblNuevaPass.Show();
+                    lblReingresarPass.Show();
+                    txtNuevaPass.Show();
+                    txtReingresarNuevaPass.Show();
+                    btnRestablecer.Show();
+                    v_resultado = 1;
+                    v_ubicacion = i;
+                    break;
                 }
-                
                 else {
-                    MessageBox.Show("Los datos ingresados son erroneos, deben de ser correctos para proceder", 
-                                    "Mensaje de Serviful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    v_resultado = 2;
+                    //MessageBox.Show("Los datos ingresados son erroneos, deben de ser correctos para proceder","Mensaje de Serviful", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+            }
+            if (v_resultado == 2) {
+                MessageBox.Show("Los datos ingresados no coinciden con ninguno almacenado en el sistema", "Mensaje de Servifull", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            }
+            else if (v_C_usuario == 2) 
+            {
+                MessageBox.Show("El usuario ingresado no existe en el sistema", "Mensaje de Servifull", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
         }
     }

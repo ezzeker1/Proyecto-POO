@@ -43,15 +43,15 @@
             this.lblKilometros = new System.Windows.Forms.Label();
             this.lblCondicion = new System.Windows.Forms.Label();
             this.DGVehiculos = new System.Windows.Forms.DataGridView();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblResUsuario = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.c1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblResUsuario = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDetalles = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@
             this.GBDetallesAuto.Controls.Add(this.lblMarca);
             this.GBDetallesAuto.Location = new System.Drawing.Point(46, 26);
             this.GBDetallesAuto.Name = "GBDetallesAuto";
-            this.GBDetallesAuto.Size = new System.Drawing.Size(355, 187);
+            this.GBDetallesAuto.Size = new System.Drawing.Size(241, 166);
             this.GBDetallesAuto.TabIndex = 0;
             this.GBDetallesAuto.TabStop = false;
             this.GBDetallesAuto.Text = "Detalles del Vehiculo";
@@ -80,7 +80,7 @@
             // CBAnio
             // 
             this.CBAnio.FormattingEnabled = true;
-            this.CBAnio.Location = new System.Drawing.Point(114, 128);
+            this.CBAnio.Location = new System.Drawing.Point(103, 128);
             this.CBAnio.Name = "CBAnio";
             this.CBAnio.Size = new System.Drawing.Size(121, 21);
             this.CBAnio.TabIndex = 11;
@@ -88,7 +88,7 @@
             // CBModelo
             // 
             this.CBModelo.FormattingEnabled = true;
-            this.CBModelo.Location = new System.Drawing.Point(113, 96);
+            this.CBModelo.Location = new System.Drawing.Point(102, 96);
             this.CBModelo.Name = "CBModelo";
             this.CBModelo.Size = new System.Drawing.Size(121, 21);
             this.CBModelo.TabIndex = 10;
@@ -96,7 +96,7 @@
             // CBMarca
             // 
             this.CBMarca.FormattingEnabled = true;
-            this.CBMarca.Location = new System.Drawing.Point(113, 61);
+            this.CBMarca.Location = new System.Drawing.Point(102, 61);
             this.CBMarca.Name = "CBMarca";
             this.CBMarca.Size = new System.Drawing.Size(121, 21);
             this.CBMarca.TabIndex = 9;
@@ -105,7 +105,7 @@
             // CBTVehiculo
             // 
             this.CBTVehiculo.FormattingEnabled = true;
-            this.CBTVehiculo.Location = new System.Drawing.Point(113, 28);
+            this.CBTVehiculo.Location = new System.Drawing.Point(102, 28);
             this.CBTVehiculo.Name = "CBTVehiculo";
             this.CBTVehiculo.Size = new System.Drawing.Size(121, 21);
             this.CBTVehiculo.TabIndex = 8;
@@ -113,7 +113,7 @@
             // lblTVehiculo
             // 
             this.lblTVehiculo.AutoSize = true;
-            this.lblTVehiculo.Location = new System.Drawing.Point(17, 31);
+            this.lblTVehiculo.Location = new System.Drawing.Point(6, 31);
             this.lblTVehiculo.Name = "lblTVehiculo";
             this.lblTVehiculo.Size = new System.Drawing.Size(90, 13);
             this.lblTVehiculo.TabIndex = 7;
@@ -122,7 +122,7 @@
             // lblModelo
             // 
             this.lblModelo.AutoSize = true;
-            this.lblModelo.Location = new System.Drawing.Point(62, 96);
+            this.lblModelo.Location = new System.Drawing.Point(51, 96);
             this.lblModelo.Name = "lblModelo";
             this.lblModelo.Size = new System.Drawing.Size(45, 13);
             this.lblModelo.TabIndex = 1;
@@ -131,7 +131,7 @@
             // lblAnio
             // 
             this.lblAnio.AutoSize = true;
-            this.lblAnio.Location = new System.Drawing.Point(78, 137);
+            this.lblAnio.Location = new System.Drawing.Point(67, 137);
             this.lblAnio.Name = "lblAnio";
             this.lblAnio.Size = new System.Drawing.Size(29, 13);
             this.lblAnio.TabIndex = 1;
@@ -140,7 +140,7 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(67, 64);
+            this.lblMarca.Location = new System.Drawing.Point(56, 64);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(40, 13);
             this.lblMarca.TabIndex = 0;
@@ -154,7 +154,7 @@
             this.GBEstadoVehiculo.Controls.Add(this.lblCondicion);
             this.GBEstadoVehiculo.Location = new System.Drawing.Point(455, 26);
             this.GBEstadoVehiculo.Name = "GBEstadoVehiculo";
-            this.GBEstadoVehiculo.Size = new System.Drawing.Size(326, 166);
+            this.GBEstadoVehiculo.Size = new System.Drawing.Size(237, 166);
             this.GBEstadoVehiculo.TabIndex = 1;
             this.GBEstadoVehiculo.TabStop = false;
             this.GBEstadoVehiculo.Text = "Estado del Vehiculo";
@@ -203,38 +203,10 @@
             this.c4,
             this.c5,
             this.c6});
-            this.DGVehiculos.Location = new System.Drawing.Point(46, 353);
+            this.DGVehiculos.Location = new System.Drawing.Point(23, 353);
             this.DGVehiculos.Name = "DGVehiculos";
             this.DGVehiculos.Size = new System.Drawing.Size(739, 226);
             this.DGVehiculos.TabIndex = 3;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(815, 9);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
-            this.lblUsuario.TabIndex = 4;
-            this.lblUsuario.Text = "Usuario:";
-            // 
-            // lblResUsuario
-            // 
-            this.lblResUsuario.AutoSize = true;
-            this.lblResUsuario.Location = new System.Drawing.Point(867, 9);
-            this.lblResUsuario.Name = "lblResUsuario";
-            this.lblResUsuario.Size = new System.Drawing.Size(49, 13);
-            this.lblResUsuario.TabIndex = 5;
-            this.lblResUsuario.Text = "..............";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(46, 299);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(107, 33);
-            this.btnBuscar.TabIndex = 6;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // c1
             // 
@@ -267,10 +239,38 @@
             this.c6.HeaderText = "Precio";
             this.c6.Name = "c6";
             // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(684, 9);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(46, 13);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "Usuario:";
+            // 
+            // lblResUsuario
+            // 
+            this.lblResUsuario.AutoSize = true;
+            this.lblResUsuario.Location = new System.Drawing.Point(736, 9);
+            this.lblResUsuario.Name = "lblResUsuario";
+            this.lblResUsuario.Size = new System.Drawing.Size(49, 13);
+            this.lblResUsuario.TabIndex = 5;
+            this.lblResUsuario.Text = "..............";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(23, 298);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(107, 33);
+            this.btnBuscar.TabIndex = 6;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(625, 319);
+            this.label1.Location = new System.Drawing.Point(602, 314);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(21, 13);
             this.label1.TabIndex = 7;
@@ -278,7 +278,7 @@
             // 
             // btnDetalles
             // 
-            this.btnDetalles.Location = new System.Drawing.Point(698, 313);
+            this.btnDetalles.Location = new System.Drawing.Point(675, 308);
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(87, 24);
             this.btnDetalles.TabIndex = 8;
@@ -287,7 +287,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(652, 316);
+            this.txtId.Location = new System.Drawing.Point(629, 311);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(40, 20);
             this.txtId.TabIndex = 9;
@@ -296,7 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 591);
+            this.ClientSize = new System.Drawing.Size(793, 591);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnDetalles);
             this.Controls.Add(this.label1);

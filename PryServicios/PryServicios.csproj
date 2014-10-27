@@ -50,11 +50,11 @@
     <Compile Include="Administracion.Designer.cs">
       <DependentUpon>Administracion.cs</DependentUpon>
     </Compile>
-    <Compile Include="MetodPago.cs">
+    <Compile Include="RealizarPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MetodPago.Designer.cs">
-      <DependentUpon>MetodPago.cs</DependentUpon>
+    <Compile Include="RealizarPago.Designer.cs">
+      <DependentUpon>RealizarPago.cs</DependentUpon>
     </Compile>
     <Compile Include="DetallesVehiculo.cs">
       <SubType>Form</SubType>
@@ -75,6 +75,12 @@
     <Compile Include="Inmuebles.Designer.cs">
       <DependentUpon>Inmuebles.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuario.Designer.cs">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="PerfilUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistrarMetodoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrarMetodoPago.Designer.cs">
+      <DependentUpon>RegistrarMetodoPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +120,7 @@
     <Compile Include="ServiciosGeneral.Designer.cs">
       <DependentUpon>ServiciosGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tarjeta.cs" />
     <Compile Include="Transaccion.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Validar.cs" />
@@ -121,14 +134,17 @@
     <EmbeddedResource Include="Administracion.resx">
       <DependentUpon>Administracion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MetodPago.resx">
-      <DependentUpon>MetodPago.cs</DependentUpon>
+    <EmbeddedResource Include="RealizarPago.resx">
+      <DependentUpon>RealizarPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetallesVehiculo.resx">
       <DependentUpon>DetallesVehiculo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUsuario.resx">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PerfilUsuario.resx">
       <DependentUpon>PerfilUsuario.cs</DependentUpon>
@@ -143,6 +159,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RegistrarMetodoPago.resx">
+      <DependentUpon>RegistrarMetodoPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegistroUsuario.resx">
       <DependentUpon>RegistroUsuario.cs</DependentUpon>
     </EmbeddedResource>

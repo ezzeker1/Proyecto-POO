@@ -20,37 +20,84 @@ namespace PryServicios
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             string v_usuario = "";
-            int v_resultado = 0, v_tusuario = 2;
+            int v_resultado = 0, v_tusuario = 2,
+                v_C_Usuario = 0,
+                v_C_Nombre = 0,
+                v_C_Apellido = 0,
+                v_C_Email = 0,
+                v_C_Telefono = 0,
+                v_C_Password = 0,
+                v_C_Respuesta = 0,
+                v_C_Edad = 0;
 
-            v_usuario = txtUsuairo.Text.ToLower();
-            
-            for (int i = 0; i < Usuario.V_Contador; i++ ){
-                if (Usuario.A_Usuario[i] == v_usuario)
-                {
-                    v_resultado = 1;
-                }
-                else v_resultado = 2;
+            v_C_Usuario = txtUsuairo.TextLength;
+            v_C_Nombre = txtNombres.TextLength;
+            v_C_Apellido = txtApellidos.TextLength;
+            v_C_Telefono = txtTelefonos.TextLength;
+            v_C_Email = txtEmail.TextLength;
+            v_C_Password = txtPassword.TextLength;
+            v_C_Edad = txtEdad.TextLength;
+            v_C_Respuesta = txtRespuesta.TextLength;
+
+            if (v_C_Usuario == 0) {
+                MessageBox.Show("Es Obligatorio Completar el usuario para seguir con el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (v_resultado == 2)
+            else if (v_C_Nombre == 0) {
+                MessageBox.Show("Debe ingresar su nombre para proceder con el registro", "Mensaje de Servifull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (v_C_Apellido == 0) {
+                MessageBox.Show("Debe completar su apellido para proceder con el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (v_C_Telefono == 0) {
+                MessageBox.Show("Es obligatorio que ingrese su Teléfono para seguir con el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (v_C_Email == 0) {
+                MessageBox.Show("Es obligatorio ingresar el Email para seguir con el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (v_C_Password == 0) {
+                MessageBox.Show("Es obligatorio ingresar una contraseña para proceder", "Mensaje de ServifUll", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (v_C_Edad == 0) {
+                MessageBox.Show("Debe ingresar su Edad para proceder con el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (v_C_Respuesta == 0)
             {
-                Usuario.A_Usuario[Usuario.V_Contador] = txtUsuairo.Text;
-                Usuario.A_Password[Usuario.V_Contador] = txtPassword.Text;
-                Usuario.A_Nombres[Usuario.V_Contador] = txtNombres.Text;
-                Usuario.A_Apellidos[Usuario.V_Contador] = txtApellidos.Text;
-                Usuario.A_Telefono[Usuario.V_Contador] = txtTelefonos.Text;
-                Usuario.A_Edad[Usuario.V_Contador] = Int32.Parse(txtEdad.Text);
-                Usuario.A_PreguntaSecreta[Usuario.V_Contador] = txtRespuesta.Text;
-                Usuario.A_Email[Usuario.V_Contador] = txtEmail.Text;
-                Usuario.A_Permisos[Usuario.V_Contador] = v_tusuario;
-                Usuario.V_Contador++;
-
-                MessageBox.Show("Se registro Correcta el usuario " + v_usuario + " En el sistema", 
-                                "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                MessageBox.Show("Debe responder a la pregunta secreta para finalizar el registro", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else {
-                MessageBox.Show("El usuario " + v_usuario + " Ya se encuentra registrado en el sitema, ingrese uno diferente",
-                                "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                v_usuario = txtUsuairo.Text.ToLower();
+
+                for (int i = 0; i < Usuario.V_Contador; i++)
+                {
+                    if (Usuario.A_Usuario[i] == v_usuario)
+                    {
+                        v_resultado = 1;
+                    }
+                    else v_resultado = 2;
+                }
+                if (v_resultado == 2)
+                {
+                    Usuario.A_Usuario[Usuario.V_Contador] = txtUsuairo.Text.ToLower();
+                    Usuario.A_Password[Usuario.V_Contador] = txtPassword.Text;
+                    Usuario.A_Nombres[Usuario.V_Contador] = txtNombres.Text.ToLower();
+                    Usuario.A_Apellidos[Usuario.V_Contador] = txtApellidos.Text.ToLower();
+                    Usuario.A_Telefono[Usuario.V_Contador] = txtTelefonos.Text;
+                    Usuario.A_Edad[Usuario.V_Contador] = Int32.Parse(txtEdad.Text);
+                    Usuario.A_PreguntaSecreta[Usuario.V_Contador] = txtRespuesta.Text.ToLower();
+                    Usuario.A_Email[Usuario.V_Contador] = txtEmail.Text.ToLower();
+                    Usuario.A_Permisos[Usuario.V_Contador] = v_tusuario;
+                    Usuario.V_Contador++;
+
+                    MessageBox.Show("Se registro Correcta el usuario " + v_usuario + " En el sistema",
+                                    "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("El usuario " + v_usuario + " Ya se encuentra registrado en el sitema, ingrese uno diferente",
+                                    "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             
         }

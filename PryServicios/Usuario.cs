@@ -19,20 +19,6 @@ namespace PryServicios
         public static int[] A_Permisos = new int[100];
         public static int V_Contador = 1;
 
-        public int ValidarSiExiste(string p_usuario, string p_password){
-            int v_Resultado = 0;
-            for (int i = 0; i < V_Contador; i++)
-            {
-                if (p_usuario == A_Usuario[i] && p_password == A_Password[i])
-                {
-                    v_Resultado = 1;
-                    break;
-                }
-                else v_Resultado = 2;
-            }
-            return v_Resultado;
-        }
-
         /*
          * Permisos en la aplicacion:
          * Administrador: 1 
@@ -50,5 +36,18 @@ namespace PryServicios
             }
                 return v_resultado;
         }
+
+        public static int PosicionUsuario(string p_usuario) {
+            int v_posicion = -1;
+
+            for (int i = 0; i <= Usuario.V_Contador; i++)
+            {
+                if (p_usuario == Usuario.A_Usuario[i]) {
+                    v_posicion = i;
+                }
+            }
+                return v_posicion;
+        }
+
     }
 }

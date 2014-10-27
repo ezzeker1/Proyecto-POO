@@ -49,19 +49,18 @@ namespace PryServicios
 
                 v_usuario = txtUsuario.Text.ToLower();
                 ObjServicioGeneral.vuser = txtUsuario.Text;
-                v_resultado1 = ObjValidar.ValidarSiexisteUsuario(v_usuario, txtPassword.Text);
+                v_resultado1 = ObjValidar.ValidarUsuarioPassword(v_usuario, txtPassword.Text);
                 v_resultado2 = ObjUsuario.ObtenerPermisos(v_usuario);
                 
                 if (v_resultado1 == 1)
                 {
-                    ObjServicioGeneral.Show();
-                    //ObjAdministracion.Show();
+                    if (v_resultado2 == 1) {
+                        ObjAdministracion.Show();
+                    }
+                    else if (v_resultado2 == 2) {
+                        ObjServicioGeneral.Show();
+                    }
                 }
-
-                else if (v_resultado1 == 2){
-                    ObjServicioGeneral.Show();
-                }
-                
                 else{
                     MessageBox.Show("El usuario O password ingresado no es correcto", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

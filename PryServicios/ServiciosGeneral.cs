@@ -24,7 +24,9 @@ namespace PryServicios
             get { return _user;}
             set { _user = value;}
         }
+
         
+
         private void PBVehiculos_Click(object sender, EventArgs e)
         {
             Vehiculos ObjVehiculos = new Vehiculos();
@@ -51,6 +53,11 @@ namespace PryServicios
             lblResUsuario.Text = vuser;
         }
 
-        
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            PerfilUsuario ObjPerfil = new PerfilUsuario();
+            ObjPerfil.vuser = lblResUsuario.Text;
+            ObjPerfil.Show();
+        } 
     }
 }

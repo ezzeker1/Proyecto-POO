@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryServicios
 {
-    public partial class MetodPago : Form
+    public partial class RealizarPago : Form
     {
-        public MetodPago()
+        public RealizarPago()
         {
             InitializeComponent();
         }
