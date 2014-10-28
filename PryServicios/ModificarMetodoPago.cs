@@ -33,13 +33,15 @@ namespace PryServicios
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        {
+        { 
             Tarjeta.A_Anio[v_posicion] = txtResAnio.Text;
             Tarjeta.A_Mes[v_posicion] = txtResMes.Text;
             Tarjeta.A_numero[v_posicion] = CBNTarjeta.Text;
             Tarjeta.A_Proveedor[v_posicion] = CBProveedor.Text;
             Tarjeta.A_Tipo[v_posicion] = CBTipo.Text;
             Tarjeta.A_Titular[v_posicion] = txtResTitular.Text;
+
+            MessageBox.Show("Se Guardaron los cambios para la tarjeta", "Mensaje de Servifull", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void ModificarMetodoPago_Load(object sender, EventArgs e)

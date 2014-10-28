@@ -136,6 +136,7 @@
     <Compile Include="Transaccion.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Validar.cs" />
+    <Compile Include="InfoFacturacion.cs" />
     <Compile Include="Vehiculo.cs" />
     <Compile Include="Vehiculos.cs">
       <SubType>Form</SubType>
