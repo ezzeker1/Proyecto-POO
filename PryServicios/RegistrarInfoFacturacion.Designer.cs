@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.GBInfoFacturacion = new System.Windows.Forms.GroupBox();
-            this.lblPrincipal = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.CBNTarjeta = new System.Windows.Forms.ComboBox();
+            this.lblNTarjeta = new System.Windows.Forms.Label();
+            this.CBPredeterminado = new System.Windows.Forms.ComboBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.CBDistrito = new System.Windows.Forms.ComboBox();
+            this.CBProvincia = new System.Windows.Forms.ComboBox();
+            this.CBDepartamento = new System.Windows.Forms.ComboBox();
+            this.CBPais = new System.Windows.Forms.ComboBox();
             this.lblDistrito = new System.Windows.Forms.Label();
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.lblProvincia = new System.Windows.Forms.Label();
             this.lblPais = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblPrincipal = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblResUsuario = new System.Windows.Forms.Label();
-            this.CBPais = new System.Windows.Forms.ComboBox();
-            this.CBDepartamento = new System.Windows.Forms.ComboBox();
-            this.CBProvincia = new System.Windows.Forms.ComboBox();
-            this.CBDistrito = new System.Windows.Forms.ComboBox();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.CBPredeterminado = new System.Windows.Forms.ComboBox();
-            this.lblNTarjeta = new System.Windows.Forms.Label();
-            this.CBNTarjeta = new System.Windows.Forms.ComboBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.GBInfoFacturacion.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,14 +73,80 @@
             this.GBInfoFacturacion.TabStop = false;
             this.GBInfoFacturacion.Text = "Información de Facturación";
             // 
-            // lblPrincipal
+            // btnRegistrar
             // 
-            this.lblPrincipal.AutoSize = true;
-            this.lblPrincipal.Location = new System.Drawing.Point(10, 33);
-            this.lblPrincipal.Name = "lblPrincipal";
-            this.lblPrincipal.Size = new System.Drawing.Size(87, 13);
-            this.lblPrincipal.TabIndex = 0;
-            this.lblPrincipal.Text = "Predeterminada: ";
+            this.btnRegistrar.Location = new System.Drawing.Point(125, 280);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(115, 30);
+            this.btnRegistrar.TabIndex = 28;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // CBNTarjeta
+            // 
+            this.CBNTarjeta.FormattingEnabled = true;
+            this.CBNTarjeta.Location = new System.Drawing.Point(93, 58);
+            this.CBNTarjeta.Name = "CBNTarjeta";
+            this.CBNTarjeta.Size = new System.Drawing.Size(173, 21);
+            this.CBNTarjeta.TabIndex = 27;
+            // 
+            // lblNTarjeta
+            // 
+            this.lblNTarjeta.AutoSize = true;
+            this.lblNTarjeta.Location = new System.Drawing.Point(31, 61);
+            this.lblNTarjeta.Name = "lblNTarjeta";
+            this.lblNTarjeta.Size = new System.Drawing.Size(58, 13);
+            this.lblNTarjeta.TabIndex = 26;
+            this.lblNTarjeta.Text = "N° Tarjeta:";
+            // 
+            // CBPredeterminado
+            // 
+            this.CBPredeterminado.FormattingEnabled = true;
+            this.CBPredeterminado.Location = new System.Drawing.Point(93, 30);
+            this.CBPredeterminado.Name = "CBPredeterminado";
+            this.CBPredeterminado.Size = new System.Drawing.Size(59, 21);
+            this.CBPredeterminado.TabIndex = 25;
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(93, 199);
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(235, 52);
+            this.txtDireccion.TabIndex = 24;
+            // 
+            // CBDistrito
+            // 
+            this.CBDistrito.FormattingEnabled = true;
+            this.CBDistrito.Location = new System.Drawing.Point(92, 167);
+            this.CBDistrito.Name = "CBDistrito";
+            this.CBDistrito.Size = new System.Drawing.Size(121, 21);
+            this.CBDistrito.TabIndex = 23;
+            // 
+            // CBProvincia
+            // 
+            this.CBProvincia.FormattingEnabled = true;
+            this.CBProvincia.Location = new System.Drawing.Point(92, 140);
+            this.CBProvincia.Name = "CBProvincia";
+            this.CBProvincia.Size = new System.Drawing.Size(121, 21);
+            this.CBProvincia.TabIndex = 22;
+            // 
+            // CBDepartamento
+            // 
+            this.CBDepartamento.FormattingEnabled = true;
+            this.CBDepartamento.Location = new System.Drawing.Point(92, 115);
+            this.CBDepartamento.Name = "CBDepartamento";
+            this.CBDepartamento.Size = new System.Drawing.Size(121, 21);
+            this.CBDepartamento.TabIndex = 21;
+            // 
+            // CBPais
+            // 
+            this.CBPais.FormattingEnabled = true;
+            this.CBPais.Location = new System.Drawing.Point(92, 88);
+            this.CBPais.Name = "CBPais";
+            this.CBPais.Size = new System.Drawing.Size(121, 21);
+            this.CBPais.TabIndex = 20;
             // 
             // lblDistrito
             // 
@@ -127,6 +193,15 @@
             this.lblDireccion.TabIndex = 15;
             this.lblDireccion.Text = "Dirección:";
             // 
+            // lblPrincipal
+            // 
+            this.lblPrincipal.AutoSize = true;
+            this.lblPrincipal.Location = new System.Drawing.Point(10, 33);
+            this.lblPrincipal.Name = "lblPrincipal";
+            this.lblPrincipal.Size = new System.Drawing.Size(87, 13);
+            this.lblPrincipal.TabIndex = 0;
+            this.lblPrincipal.Text = "Predeterminada: ";
+            // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
@@ -145,81 +220,6 @@
             this.lblResUsuario.TabIndex = 2;
             this.lblResUsuario.Text = "................";
             // 
-            // CBPais
-            // 
-            this.CBPais.FormattingEnabled = true;
-            this.CBPais.Location = new System.Drawing.Point(92, 88);
-            this.CBPais.Name = "CBPais";
-            this.CBPais.Size = new System.Drawing.Size(121, 21);
-            this.CBPais.TabIndex = 20;
-            // 
-            // CBDepartamento
-            // 
-            this.CBDepartamento.FormattingEnabled = true;
-            this.CBDepartamento.Location = new System.Drawing.Point(92, 115);
-            this.CBDepartamento.Name = "CBDepartamento";
-            this.CBDepartamento.Size = new System.Drawing.Size(121, 21);
-            this.CBDepartamento.TabIndex = 21;
-            // 
-            // CBProvincia
-            // 
-            this.CBProvincia.FormattingEnabled = true;
-            this.CBProvincia.Location = new System.Drawing.Point(92, 140);
-            this.CBProvincia.Name = "CBProvincia";
-            this.CBProvincia.Size = new System.Drawing.Size(121, 21);
-            this.CBProvincia.TabIndex = 22;
-            // 
-            // CBDistrito
-            // 
-            this.CBDistrito.FormattingEnabled = true;
-            this.CBDistrito.Location = new System.Drawing.Point(92, 167);
-            this.CBDistrito.Name = "CBDistrito";
-            this.CBDistrito.Size = new System.Drawing.Size(121, 21);
-            this.CBDistrito.TabIndex = 23;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(93, 199);
-            this.txtDireccion.Multiline = true;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(235, 52);
-            this.txtDireccion.TabIndex = 24;
-            // 
-            // CBPredeterminado
-            // 
-            this.CBPredeterminado.FormattingEnabled = true;
-            this.CBPredeterminado.Location = new System.Drawing.Point(93, 30);
-            this.CBPredeterminado.Name = "CBPredeterminado";
-            this.CBPredeterminado.Size = new System.Drawing.Size(54, 21);
-            this.CBPredeterminado.TabIndex = 25;
-            // 
-            // lblNTarjeta
-            // 
-            this.lblNTarjeta.AutoSize = true;
-            this.lblNTarjeta.Location = new System.Drawing.Point(31, 61);
-            this.lblNTarjeta.Name = "lblNTarjeta";
-            this.lblNTarjeta.Size = new System.Drawing.Size(58, 13);
-            this.lblNTarjeta.TabIndex = 26;
-            this.lblNTarjeta.Text = "N° Tarjeta:";
-            // 
-            // CBNTarjeta
-            // 
-            this.CBNTarjeta.FormattingEnabled = true;
-            this.CBNTarjeta.Location = new System.Drawing.Point(93, 58);
-            this.CBNTarjeta.Name = "CBNTarjeta";
-            this.CBNTarjeta.Size = new System.Drawing.Size(173, 21);
-            this.CBNTarjeta.TabIndex = 27;
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Location = new System.Drawing.Point(125, 280);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(115, 30);
-            this.btnRegistrar.TabIndex = 28;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
             // RegistrarInfoFacturacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +230,7 @@
             this.Controls.Add(this.GBInfoFacturacion);
             this.Name = "RegistrarInfoFacturacion";
             this.Text = "Registrar Información de Facturacion";
+            this.Load += new System.EventHandler(this.RegistrarInfoFacturacion_Load);
             this.GBInfoFacturacion.ResumeLayout(false);
             this.GBInfoFacturacion.PerformLayout();
             this.ResumeLayout(false);

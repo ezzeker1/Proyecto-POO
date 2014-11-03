@@ -34,8 +34,16 @@ namespace PryServicios
 
            if (txtReingresarNuevaPass.Text == txtNuevaPass.Text)
            {
+               DialogResult D_Resultado = MessageBox.Show("Esta seguro que desea moficiar la contraseña?", "Mensaje de ServiFull", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+               if (D_Resultado == DialogResult.Yes){
                Usuario.A_Password[v_ubicacion] = txtNuevaPass.Text;
                MessageBox.Show("Se modifico la contraseña Correctamente", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               this.Close();
+               }
+               else if ( D_Resultado == DialogResult.No)
+               {
+                   MessageBox.Show("No se realizo ningun cambio", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               }
            }
            else
            {

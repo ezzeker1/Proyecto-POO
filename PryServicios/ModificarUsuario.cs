@@ -51,6 +51,9 @@ namespace PryServicios
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            DialogResult D_Resultado = MessageBox.Show("Esta seguro que desea modificar su información", "Mensaje ServiFull", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+            
+            if(D_Resultado == DialogResult.Yes){
             //Actualizar los valores para ese usuario.
             Usuario.A_Usuario[v_posicion] = txtUsuairo.Text;
             Usuario.A_Apellidos[v_posicion] = txtApellidos.Text;
@@ -63,6 +66,11 @@ namespace PryServicios
 
             MessageBox.Show("Se guardaron todos los cambios", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+            }
+            else if (D_Resultado == DialogResult.No){
+            MessageBox.Show("No se realizo ningun cambio", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+            }
         }
            
         }

@@ -89,20 +89,29 @@ namespace PryServicios
                 }
                 if (v_resultado == 2)  //Si el usuario no existe, ingresa.....
                 {
-                    Usuario.A_Usuario[Usuario.V_Contador] = txtUsuairo.Text.ToLower();
-                    Usuario.A_Password[Usuario.V_Contador] = txtPassword.Text;
-                    Usuario.A_Nombres[Usuario.V_Contador] = txtNombres.Text.ToLower();
-                    Usuario.A_Apellidos[Usuario.V_Contador] = txtApellidos.Text.ToLower();
-                    Usuario.A_Telefono[Usuario.V_Contador] = txtTelefonos.Text;
-                    Usuario.A_Edad[Usuario.V_Contador] = Int32.Parse(txtEdad.Text);
-                    Usuario.A_PreguntaSecreta[Usuario.V_Contador] = txtRespuesta.Text.ToLower();
-                    Usuario.A_Email[Usuario.V_Contador] = txtEmail.Text.ToLower();
-                    Usuario.A_Permisos[Usuario.V_Contador] = v_tusuario;
-                    Usuario.V_Contador++;
+                    DialogResult D_Resultado = MessageBox.Show("Se va a crear el Usuario " + v_usuario + " Esta seguro que los datos ingresados son los correctos?", 
+                                                               "Mensaje de ServiFull", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
 
-                    MessageBox.Show("Se registro Correcta el usuario " + v_usuario + " En el sistema",
-                                    "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
+                    if (D_Resultado == DialogResult.Yes)
+                    {
+                        Usuario.A_Usuario[Usuario.V_Contador] = txtUsuairo.Text.ToLower();
+                        Usuario.A_Password[Usuario.V_Contador] = txtPassword.Text;
+                        Usuario.A_Nombres[Usuario.V_Contador] = txtNombres.Text.ToLower();
+                        Usuario.A_Apellidos[Usuario.V_Contador] = txtApellidos.Text.ToLower();
+                        Usuario.A_Telefono[Usuario.V_Contador] = txtTelefonos.Text;
+                        Usuario.A_Edad[Usuario.V_Contador] = Int32.Parse(txtEdad.Text);
+                        Usuario.A_PreguntaSecreta[Usuario.V_Contador] = txtRespuesta.Text.ToLower();
+                        Usuario.A_Email[Usuario.V_Contador] = txtEmail.Text.ToLower();
+                        Usuario.A_Permisos[Usuario.V_Contador] = v_tusuario;
+                        Usuario.V_Contador++;
+
+                        MessageBox.Show("Se registro Correcta el usuario " + v_usuario + " En el sistema",
+                                        "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                    else if (D_Resultado == DialogResult.No) {
+                        MessageBox.Show("No se realizo ninguna acción", "Mensaje de ServiFull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
                 else  //Si el usuario Si existe Me muestra el siguiente mensaje.
                 {

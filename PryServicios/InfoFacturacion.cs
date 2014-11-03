@@ -18,7 +18,7 @@ namespace PryServicios
         public static string[] A_Provincia = new string[100];
         public static string[] A_Distrito = new string[100];
         public static string[] A_Direccion = new string[100];
-        public static int[] V_Contador = new int[100];
+        public static int V_Contador = 0;
 
         public static string ValidarInfoFacturacion(string p_predeterminado, string p_ntarjeta, string p_pais, string p_departamento, string p_provincia,string p_distrito, string p_direccion)
         {

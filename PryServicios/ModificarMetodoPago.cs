@@ -33,7 +33,11 @@ namespace PryServicios
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
-        { 
+        {
+            DialogResult D_resultado = MessageBox.Show("Esta seguro que desea modificar esta información?", "Mensaje de ServiFull", 
+                                                       MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+            
+            if(D_resultado == DialogResult.Yes){
             Tarjeta.A_Anio[v_posicion] = txtResAnio.Text;
             Tarjeta.A_Mes[v_posicion] = txtResMes.Text;
             Tarjeta.A_numero[v_posicion] = CBNTarjeta.Text;
@@ -42,6 +46,13 @@ namespace PryServicios
             Tarjeta.A_Titular[v_posicion] = txtResTitular.Text;
 
             MessageBox.Show("Se Guardaron los cambios para la tarjeta", "Mensaje de Servifull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+            }
+
+            else if (D_resultado == DialogResult.No) {
+            MessageBox.Show("No se realizo ninguna Acción", "Mensaje de Servifull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+            }
         }
 
         private void ModificarMetodoPago_Load(object sender, EventArgs e)
@@ -64,23 +75,28 @@ namespace PryServicios
                 {
                     v_posicion = i;
 
-                    if(Tarjeta.A_Titular[i] == "Credito"){
+                    if (Tarjeta.A_Proveedor[i].ToString() == "Visa")
+                    {
+                        CBProveedor.SelectedIndex = 2;
+                    }
+                    else if (Tarjeta.A_Proveedor[i].ToString() == "American Express")
+                    {
+                        CBProveedor.SelectedIndex = 1;
+                    }
+                    else if (Tarjeta.A_Proveedor[i].ToString() == "MasterCard")
+                    {
+                        CBProveedor.SelectedIndex = 2;
+                    }
+
+                    if (Tarjeta.A_Titular[i].ToString() == "Credito")
+                    {
                         CBTipo.SelectedIndex = 1;
                     }
-                    else if (Tarjeta.A_Tipo[i] == "Debito")
+                    else if (Tarjeta.A_Tipo[i].ToString() == "Debito")
                     {
                         CBTipo.SelectedIndex = 0;
                     }
-                    if(Tarjeta.A_Proveedor[i] == "Visa"){
-                        CBProveedor.SelectedIndex = 0;
-                    }
-                    else if (Tarjeta.A_Proveedor[i] == "American Express"){
-                        CBProveedor.SelectedIndex = 1;
-                    }
-                    else if (Tarjeta.A_Proveedor[i] == "MasterCard")
-                    {
-                        CBProveedor.SelectedIndex = 2;               
-                    }
+
                     txtResAnio.Text = Tarjeta.A_Anio[i];
                     txtResMes.Text = Tarjeta.A_Mes[i];
                     txtResTitular.Text = Tarjeta.A_Titular[i];

@@ -66,14 +66,14 @@
             this.GBMetodoPago.Controls.Add(this.lblTipo);
             this.GBMetodoPago.Location = new System.Drawing.Point(21, 49);
             this.GBMetodoPago.Name = "GBMetodoPago";
-            this.GBMetodoPago.Size = new System.Drawing.Size(439, 382);
+            this.GBMetodoPago.Size = new System.Drawing.Size(320, 382);
             this.GBMetodoPago.TabIndex = 0;
             this.GBMetodoPago.TabStop = false;
             this.GBMetodoPago.Text = "Método de Pago";
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(151, 342);
+            this.btnRegistrar.Location = new System.Drawing.Point(95, 319);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(134, 31);
             this.btnRegistrar.TabIndex = 13;
@@ -83,7 +83,7 @@
             // 
             // txtTitular
             // 
-            this.txtTitular.Location = new System.Drawing.Point(19, 291);
+            this.txtTitular.Location = new System.Drawing.Point(23, 276);
             this.txtTitular.Name = "txtTitular";
             this.txtTitular.Size = new System.Drawing.Size(219, 20);
             this.txtTitular.TabIndex = 12;
@@ -92,7 +92,7 @@
             // 
             this.lblTitular.AutoSize = true;
             this.lblTitular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitular.Location = new System.Drawing.Point(11, 252);
+            this.lblTitular.Location = new System.Drawing.Point(15, 237);
             this.lblTitular.Name = "lblTitular";
             this.lblTitular.Size = new System.Drawing.Size(164, 20);
             this.lblTitular.TabIndex = 11;
@@ -100,14 +100,14 @@
             // 
             // txtMes
             // 
-            this.txtMes.Location = new System.Drawing.Point(139, 199);
+            this.txtMes.Location = new System.Drawing.Point(139, 198);
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(35, 20);
             this.txtMes.TabIndex = 10;
             // 
             // txtAnio
             // 
-            this.txtAnio.Location = new System.Drawing.Point(51, 199);
+            this.txtAnio.Location = new System.Drawing.Point(51, 198);
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(32, 20);
             this.txtAnio.TabIndex = 9;
@@ -115,7 +115,7 @@
             // lblMes
             // 
             this.lblMes.AutoSize = true;
-            this.lblMes.Location = new System.Drawing.Point(103, 202);
+            this.lblMes.Location = new System.Drawing.Point(103, 201);
             this.lblMes.Name = "lblMes";
             this.lblMes.Size = new System.Drawing.Size(30, 13);
             this.lblMes.TabIndex = 8;
@@ -124,7 +124,7 @@
             // lblAnio
             // 
             this.lblAnio.AutoSize = true;
-            this.lblAnio.Location = new System.Drawing.Point(16, 202);
+            this.lblAnio.Location = new System.Drawing.Point(16, 201);
             this.lblAnio.Name = "lblAnio";
             this.lblAnio.Size = new System.Drawing.Size(29, 13);
             this.lblAnio.TabIndex = 7;
@@ -142,9 +142,9 @@
             // 
             // txtNTarjeta
             // 
-            this.txtNTarjeta.Location = new System.Drawing.Point(77, 117);
+            this.txtNTarjeta.Location = new System.Drawing.Point(77, 120);
             this.txtNTarjeta.Name = "txtNTarjeta";
-            this.txtNTarjeta.Size = new System.Drawing.Size(179, 20);
+            this.txtNTarjeta.Size = new System.Drawing.Size(121, 20);
             this.txtNTarjeta.TabIndex = 5;
             // 
             // lblTarjeta
@@ -193,7 +193,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(421, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(289, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(55, 13);
             this.lblUsuario.TabIndex = 1;
@@ -202,7 +202,7 @@
             // lblTxtUsuario
             // 
             this.lblTxtUsuario.AutoSize = true;
-            this.lblTxtUsuario.Location = new System.Drawing.Point(369, 9);
+            this.lblTxtUsuario.Location = new System.Drawing.Point(237, 9);
             this.lblTxtUsuario.Name = "lblTxtUsuario";
             this.lblTxtUsuario.Size = new System.Drawing.Size(46, 13);
             this.lblTxtUsuario.TabIndex = 2;
@@ -212,7 +212,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 443);
+            this.ClientSize = new System.Drawing.Size(361, 443);
             this.Controls.Add(this.lblTxtUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.GBMetodoPago);

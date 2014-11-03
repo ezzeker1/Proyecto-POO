@@ -17,18 +17,58 @@ namespace PryServicios
         public static string[] A_usuario = new string[100];
         public static int V_Contador = 0;
 
-        //public static void RegistrarTarjeta(string p_numero, string p_anio, string p_mes, string p_titular, string p_proveedor,
-        //                                    string p_tipo, string p_usuario) {
+        public static string ValidarNTarjeta(string p_ntarjeta, string p_proveedor) {
+            string v_resultado = "0";
+            int V_extraccion = 0;
 
-        //                                        A_Anio[V_Contador] = p_anio;
-        //                                        A_Mes[V_Contador] = p_mes;
-        //                                        A_numero[V_Contador] = p_numero;
-        //                                        A_Proveedor[V_Contador] = p_proveedor;
-        //                                        A_Tipo[V_Contador] = p_tipo;
-        //                                        A_Titular[V_Contador] = p_tipo;
-        //                                        A_usuario[V_Contador] = p_usuario;
-        //                                        V_Contador++;
-        //}
+            if (p_ntarjeta.Length == 16)
+            {
+                V_extraccion = Int32.Parse(p_ntarjeta.Substring(0, 1));
 
+                if (p_proveedor == "Visa" && V_extraccion != 4)
+                {
+                    v_resultado = "Las Tarjetas Visa Deben de Comenzar con 4";
+                }
+                else if (p_proveedor == "MasterCard")
+                {
+                    int v_contador2 = 5, v_numero1 = 50;
+                    V_extraccion = Int32.Parse(p_ntarjeta.Substring(0, 2));
+
+                    for (int i = 1; i <= v_contador2; i++)
+                    {
+                        v_numero1 = v_numero1 + 1;
+                        if (V_extraccion != v_numero1)
+                        {
+                            v_resultado = "Las Tarjetas MasterCard Deben de comenzar con 51 a 55";
+                        }
+                        else if (V_extraccion == v_numero1) {
+                            break;
+                        }
+                    }
+                }
+                else 
+                    if (p_proveedor == "American Express")
+                {
+                    int v_contador2 = 2, v_numero2 = 34;
+                    V_extraccion = Int32.Parse(p_ntarjeta.Substring(0, 2));
+
+                    for (int i = 1; i <= v_contador2; i++)
+                    {
+                        if (V_extraccion != v_numero2)
+                        {
+                            v_resultado = "Las Tarjetas American Express Deben de comenzar con 34 o 37";
+                            v_numero2 = v_numero2 + 3;
+                        }
+                        else if (V_extraccion == v_numero2) {
+                            break;
+                        }
+                        
+                    }
+                }
+            }
+            else v_resultado = "La tarjeta debe de tener 16 digitos para que sea valida";
+  
+            return v_resultado;
+        }
     }
 }
