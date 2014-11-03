@@ -59,6 +59,7 @@ namespace PryServicios
                     InfoFacturacion.A_Pais[InfoFacturacion.V_Contador] = CBPais.Text;
                     InfoFacturacion.A_usuario[InfoFacturacion.V_Contador] = lblResUsuario.Text;
                     InfoFacturacion.A_Predeterminado[InfoFacturacion.V_Contador] = v_predeterminado;
+                    InfoFacturacion.V_Contador++;
                     this.Close();
                 }
                 else if(D_Resultado == DialogResult.No) { 

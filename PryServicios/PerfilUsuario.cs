@@ -33,12 +33,32 @@ namespace PryServicios
 
             v_posicion = Usuario.PosicionUsuario(lblResUsuario.Text);
 
+
+            //Cargar el ComboBox de la tarjeta
             for (int i = 0; i <= Tarjeta.V_Contador; i++)
             {
                 if (Tarjeta.A_usuario[i] == lblResUsuario.Text) {
                     CBSeleccion.Items.Add(Tarjeta.A_numero[i]);
                 }
             }
+
+            //Cargar El comboBox de la información de Facturación
+            for (int i = 0; i <= InfoFacturacion.V_Contador; i++)
+            {
+                int v_f_contador = 1;
+
+                if (InfoFacturacion.A_usuario[i] == lblResUsuario.Text)
+                {
+                    if (InfoFacturacion.A_Predeterminado[i] == 1){
+                    CBFSeleccionar.Items.Add("Principal");
+                    }
+                    else if (InfoFacturacion.A_Predeterminado[i] == 2){
+                        CBFSeleccionar.Items.Add("Alternativa " + v_f_contador);
+                    }
+                }
+            }
+
+            //Cargar los datos del Usuario
                 if (v_posicion > -1)
                 {
                     lblResDUsuario.Text = Usuario.A_Usuario[v_posicion];
@@ -93,6 +113,39 @@ namespace PryServicios
             RegistrarInfoFacturacion OBjInfoFacturacion = new RegistrarInfoFacturacion();
             OBjInfoFacturacion.vuser = lblResUsuario.Text;
             OBjInfoFacturacion.Show();
+        }
+
+        private void CBFSeleccionar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           string v_extraer = "";
+           int v_l_contador = 0;
+
+           v_l_contador = CBFSeleccionar.Text.Length;
+           if (v_l_contador > 11) {
+               v_extraer = CBFSeleccionar.Text.Substring(0, 11);
+           }
+
+            for (int i = 0; i <= InfoFacturacion.V_Contador; i++)
+            {
+                if (CBFSeleccionar.Text == "Principal" && InfoFacturacion.A_usuario[i] == lblResUsuario.Text)
+                {
+                    lblResPais.Text = InfoFacturacion.A_Pais[i];
+                    lblResDepartamento.Text = InfoFacturacion.A_Departamento[i];
+                    lblResProvincia.Text = InfoFacturacion.A_Provincia[i];
+                    lblResdistrito.Text = InfoFacturacion.A_Distrito[i];
+                    lblResDireccion.Text = InfoFacturacion.A_Direccion[i];   
+                }
+                else if (v_extraer == "Alternativa" && InfoFacturacion.A_usuario[i] == lblResUsuario.Text)
+                {
+
+                }
+            }
+        }
+
+        private void btnFModificar_Click(object sender, EventArgs e)
+        {
+            ModificarInfoFacturacion ObjModificarInfoFacturacion = new ModificarInfoFacturacion();
+            ObjModificarInfoFacturacion.Show();
         }
 
     }

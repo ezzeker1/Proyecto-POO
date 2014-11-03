@@ -37,16 +37,20 @@ namespace PryServicios
 
         private void CBMarca_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (CBMarca.SelectedIndex.ToString() ==  "Audi"){
+            if (CBMarca.Text ==  "Audi"){
                 CBModelo.Items.Add("R8");
                 CBModelo.Items.Add("A4");
                 CBModelo.Items.Add("A5");
                 CBModelo.Items.Add("A6");
             }
-            else if (CBMarca.SelectedIndex.ToString() == "BMW"){
+            else if (CBMarca.Text == "BMW"){
                 CBModelo.Items.Add("DFT");
+            }
+        }
 
-            }
-            }
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -44,12 +44,12 @@
             this.lblKilometraje = new System.Windows.Forms.Label();
             this.GBDatosVehiculo = new System.Windows.Forms.GroupBox();
             this.GBVendedor = new System.Windows.Forms.GroupBox();
-            this.lblnombres = new System.Windows.Forms.Label();
-            this.lblResNombre = new System.Windows.Forms.Label();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.lblResTelefono = new System.Windows.Forms.Label();
             this.lblResEmail = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.lblResTelefono = new System.Windows.Forms.Label();
+            this.lblResNombre = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblnombres = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GBDatosVehiculo.SuspendLayout();
             this.GBVendedor.SuspendLayout();
@@ -93,9 +93,10 @@
             // 
             // btnComprar
             // 
-            this.btnComprar.Location = new System.Drawing.Point(379, 375);
+            this.btnComprar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComprar.Location = new System.Drawing.Point(379, 368);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(137, 44);
+            this.btnComprar.Size = new System.Drawing.Size(159, 51);
             this.btnComprar.TabIndex = 4;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
@@ -198,7 +199,7 @@
             this.GBDatosVehiculo.Size = new System.Drawing.Size(204, 215);
             this.GBDatosVehiculo.TabIndex = 14;
             this.GBDatosVehiculo.TabStop = false;
-            this.GBDatosVehiculo.Text = "groupBox1";
+            this.GBDatosVehiculo.Text = "Datos del Vehiculo";
             // 
             // GBVendedor
             // 
@@ -214,42 +215,6 @@
             this.GBVendedor.TabIndex = 15;
             this.GBVendedor.TabStop = false;
             this.GBVendedor.Text = "Datos del Vendedor";
-            // 
-            // lblnombres
-            // 
-            this.lblnombres.AutoSize = true;
-            this.lblnombres.Location = new System.Drawing.Point(9, 31);
-            this.lblnombres.Name = "lblnombres";
-            this.lblnombres.Size = new System.Drawing.Size(47, 13);
-            this.lblnombres.TabIndex = 0;
-            this.lblnombres.Text = "Nombre:";
-            // 
-            // lblResNombre
-            // 
-            this.lblResNombre.AutoSize = true;
-            this.lblResNombre.Location = new System.Drawing.Point(62, 31);
-            this.lblResNombre.Name = "lblResNombre";
-            this.lblResNombre.Size = new System.Drawing.Size(85, 13);
-            this.lblResNombre.TabIndex = 9;
-            this.lblResNombre.Text = "..........................";
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(4, 60);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
-            this.lblTelefono.TabIndex = 8;
-            this.lblTelefono.Text = "Teléfono:";
-            // 
-            // lblResTelefono
-            // 
-            this.lblResTelefono.AutoSize = true;
-            this.lblResTelefono.Location = new System.Drawing.Point(62, 60);
-            this.lblResTelefono.Name = "lblResTelefono";
-            this.lblResTelefono.Size = new System.Drawing.Size(82, 13);
-            this.lblResTelefono.TabIndex = 10;
-            this.lblResTelefono.Text = ".........................";
             // 
             // lblResEmail
             // 
@@ -269,6 +234,42 @@
             this.lblEmail.TabIndex = 11;
             this.lblEmail.Text = "Email:";
             // 
+            // lblResTelefono
+            // 
+            this.lblResTelefono.AutoSize = true;
+            this.lblResTelefono.Location = new System.Drawing.Point(62, 60);
+            this.lblResTelefono.Name = "lblResTelefono";
+            this.lblResTelefono.Size = new System.Drawing.Size(82, 13);
+            this.lblResTelefono.TabIndex = 10;
+            this.lblResTelefono.Text = ".........................";
+            // 
+            // lblResNombre
+            // 
+            this.lblResNombre.AutoSize = true;
+            this.lblResNombre.Location = new System.Drawing.Point(62, 31);
+            this.lblResNombre.Name = "lblResNombre";
+            this.lblResNombre.Size = new System.Drawing.Size(85, 13);
+            this.lblResNombre.TabIndex = 9;
+            this.lblResNombre.Text = "..........................";
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(4, 60);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
+            this.lblTelefono.TabIndex = 8;
+            this.lblTelefono.Text = "Teléfono:";
+            // 
+            // lblnombres
+            // 
+            this.lblnombres.AutoSize = true;
+            this.lblnombres.Location = new System.Drawing.Point(9, 31);
+            this.lblnombres.Name = "lblnombres";
+            this.lblnombres.Size = new System.Drawing.Size(47, 13);
+            this.lblnombres.TabIndex = 0;
+            this.lblnombres.Text = "Nombre:";
+            // 
             // DetallesVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,7 +282,7 @@
             this.Controls.Add(this.lblResUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Name = "DetallesVehiculo";
-            this.Text = "DetallesVehiculo";
+            this.Text = "Detalles del Vehiculo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GBDatosVehiculo.ResumeLayout(false);
             this.GBDatosVehiculo.PerformLayout();

@@ -60,6 +60,7 @@
             this.lblSeleccion = new System.Windows.Forms.Label();
             this.btnMPago = new System.Windows.Forms.Button();
             this.GBFacturacion = new System.Windows.Forms.GroupBox();
+            this.lblResdistrito = new System.Windows.Forms.Label();
             this.lblDistrito = new System.Windows.Forms.Label();
             this.CBFSeleccionar = new System.Windows.Forms.ComboBox();
             this.lblFSeleccionar = new System.Windows.Forms.Label();
@@ -74,7 +75,6 @@
             this.lblPais = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblResdistrito = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.GBUsuario.SuspendLayout();
             this.GBPago.SuspendLayout();
@@ -286,7 +286,7 @@
             this.btnRegistrar.Location = new System.Drawing.Point(107, 19);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 12;
+            this.btnRegistrar.TabIndex = 1;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
@@ -333,7 +333,7 @@
             this.CBSeleccion.Location = new System.Drawing.Point(101, 67);
             this.CBSeleccion.Name = "CBSeleccion";
             this.CBSeleccion.Size = new System.Drawing.Size(151, 21);
-            this.CBSeleccion.TabIndex = 7;
+            this.CBSeleccion.TabIndex = 2;
             this.CBSeleccion.SelectedIndexChanged += new System.EventHandler(this.CBSeleccion_SelectedIndexChanged);
             // 
             // lblResTitular
@@ -387,7 +387,7 @@
             this.btnMPago.Location = new System.Drawing.Point(188, 19);
             this.btnMPago.Name = "btnMPago";
             this.btnMPago.Size = new System.Drawing.Size(75, 23);
-            this.btnMPago.TabIndex = 0;
+            this.btnMPago.TabIndex = 3;
             this.btnMPago.Text = "Modificar";
             this.btnMPago.UseVisualStyleBackColor = true;
             this.btnMPago.Click += new System.EventHandler(this.btnMPago_Click);
@@ -415,6 +415,15 @@
             this.GBFacturacion.TabStop = false;
             this.GBFacturacion.Text = "Información para la Facturación";
             // 
+            // lblResdistrito
+            // 
+            this.lblResdistrito.AutoSize = true;
+            this.lblResdistrito.Location = new System.Drawing.Point(89, 180);
+            this.lblResdistrito.Name = "lblResdistrito";
+            this.lblResdistrito.Size = new System.Drawing.Size(88, 13);
+            this.lblResdistrito.TabIndex = 15;
+            this.lblResdistrito.Text = "...........................";
+            // 
             // lblDistrito
             // 
             this.lblDistrito.AutoSize = true;
@@ -430,7 +439,8 @@
             this.CBFSeleccionar.Location = new System.Drawing.Point(106, 64);
             this.CBFSeleccionar.Name = "CBFSeleccionar";
             this.CBFSeleccionar.Size = new System.Drawing.Size(147, 21);
-            this.CBFSeleccionar.TabIndex = 13;
+            this.CBFSeleccionar.TabIndex = 5;
+            this.CBFSeleccionar.SelectedIndexChanged += new System.EventHandler(this.CBFSeleccionar_SelectedIndexChanged);
             // 
             // lblFSeleccionar
             // 
@@ -447,16 +457,17 @@
             this.btnFModificar.Location = new System.Drawing.Point(187, 19);
             this.btnFModificar.Name = "btnFModificar";
             this.btnFModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnFModificar.TabIndex = 11;
+            this.btnFModificar.TabIndex = 6;
             this.btnFModificar.Text = "Modificar";
             this.btnFModificar.UseVisualStyleBackColor = true;
+            this.btnFModificar.Click += new System.EventHandler(this.btnFModificar_Click);
             // 
             // btnFRegistrar
             // 
             this.btnFRegistrar.Location = new System.Drawing.Point(106, 20);
             this.btnFRegistrar.Name = "btnFRegistrar";
             this.btnFRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnFRegistrar.TabIndex = 10;
+            this.btnFRegistrar.TabIndex = 4;
             this.btnFRegistrar.Text = "Registrar";
             this.btnFRegistrar.UseVisualStyleBackColor = true;
             this.btnFRegistrar.Click += new System.EventHandler(this.btnFRegistrar_Click);
@@ -540,15 +551,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(810, 148);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // lblResdistrito
-            // 
-            this.lblResdistrito.AutoSize = true;
-            this.lblResdistrito.Location = new System.Drawing.Point(89, 180);
-            this.lblResdistrito.Name = "lblResdistrito";
-            this.lblResdistrito.Size = new System.Drawing.Size(88, 13);
-            this.lblResdistrito.TabIndex = 15;
-            this.lblResdistrito.Text = "...........................";
             // 
             // label1
             // 
