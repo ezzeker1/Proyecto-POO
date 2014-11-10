@@ -30,7 +30,7 @@ namespace PryServicios
         private void PBVehiculos_Click(object sender, EventArgs e)
         {
             Vehiculos ObjVehiculos = new Vehiculos();
-
+            ObjVehiculos.vuser = lblResUsuario.Text;
             ObjVehiculos.Show();
         }
 

@@ -63,6 +63,16 @@ namespace PryServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bugatti {
+            get {
+                object obj = ResourceManager.GetObject("Bugatti", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carros {
             get {
                 object obj = ResourceManager.GetObject("carros", resourceCulture);
