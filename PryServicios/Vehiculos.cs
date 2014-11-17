@@ -12,24 +12,11 @@ namespace PryServicios
 {
     public partial class Vehiculos : Form
     {
+        int v_contador = 0;
         public Vehiculos()
         {
             InitializeComponent();
-            
-            ////Cargar tipos de vehiculos
-            //CBTVehiculo.Items.Add("Auto");
-            //CBTVehiculo.Items.Add("Moto");
 
-            ////Año
-            //CBAnio.Items.Add(2014);
-            //CBAnio.Items.Add(2013);
-
-            ////Cargar condicion
-            //CBCondicion.Items.Add("Nuevo");
-            //CBCondicion.Items.Add("Usado");
-
-            //Cargar Vehiculo
-            // Vehiculo 0
             Vehiculo.A_Anio[0] = 2013;
             Vehiculo.A_Kilometraje[0] = 0;
             Vehiculo.A_Marca[0] = "Audi";
@@ -117,6 +104,15 @@ namespace PryServicios
             Vehiculo.A_TVehiculo[7] = "Auto";
             Vehiculo.A_ID[7] = 7;
             Vehiculo.A_Condicion[7] = "Nuevo";
+             
+            for (int i = 0; i < Vehiculo.v_contador; i++)
+            {
+                if (CBTVehiculo.Items.Contains(Vehiculo.A_TVehiculo[i])) {
+                    v_contador = 1;
+                }
+                else CBTVehiculo.Items.Add(Vehiculo.A_TVehiculo[i]);                
+                
+            }
         }
         private string _user;
 
@@ -134,55 +130,86 @@ namespace PryServicios
 
          private void CBTVehiculo_SelectedIndexChanged(object sender, EventArgs e)
          {
-             //if (CBTVehiculo.Text == "Auto") {
-                
-             //    CBMarca.Items.Add("Audi");
-             //    CBMarca.Items.Add("BMW");
-             //    CBMarca.Items.Add("Mercedez");
-               
-             //}
-             //else if (CBTVehiculo.Text == "Moto") {
+             
 
-             //    CBMarca.Items.Add("Honda");
-             //    CBMarca.Items.Add("Kawazaki");
-             //    CBMarca.Items.Add("Ronco");
-             //}
-
+             DGVehiculos.Rows.Clear();
+             //Cargar las grilla
              for (int i = 0; i<= Vehiculo.v_contador; i++){
-                 if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text){
+                 if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text){                     
                      DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
                          Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
-                         Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]);
-                 }
-                
+                         Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]); }
 
+                 //Cargar las marcas
+                 for (int j = 0; j < Vehiculo.v_contador; j++) {
+                     if (CBMarca.Items.Contains(Vehiculo.A_Marca[j]))
+                     { 
+                         v_contador = 1;
+                     } 
+                     else CBMarca.Items.Add(Vehiculo.A_Marca[j]);  
+                 }
+
+                 //Cargar los modelos
+                 for (int m = 0; m < Vehiculo.v_contador; m++) { 
+                 if(CBModelo.Items.Contains(Vehiculo.A_Modelo[m])){
+                 v_contador = 1;
+                 }
+                 else CBModelo.Items.Add(Vehiculo.A_Modelo[m]);
+                 }}
+
+              //Cargar los años 
+             for (int d = 0; d < Vehiculo.v_contador; d++){
+             if(CBAnio.Items.Contains(Vehiculo.A_Anio[d])){
+             v_contador = 1;
              }
-                 }
-         
+             else CBAnio.Items.Add(Vehiculo.A_Anio[d]);
+             }
 
+             //Cargar Condicion
+             for (int f = 0; f < Vehiculo.v_contador; f++) {
+                 if (CBCondicion.Items.Contains(Vehiculo.A_Condicion[f]))
+                 {
+                     v_contador = 1;
+                 }
+                 else CBCondicion.Items.Add(Vehiculo.A_Condicion[f]);
+             }
+
+              }
+                 
          private void CBMarca_SelectedIndexChanged(object sender, EventArgs e)
          {
-             //if (CBMarca.Text == "Audi") {
-             //    Cargar Modelo
-             //    CBModelo.Items.Add("A4"); // Para Audi
-             //}
-             //else if (CBMarca.Text == "BMW") {
-             //    CBModelo.Items.Add("X6"); // Para BMW
+             //Cargar Modelos
+             for (int i = 0; i < Vehiculo.v_contador; i++) {
+                 if (CBModelo.Items.Contains(Vehiculo.A_Modelo[i]))
+                 {
+                     v_contador = 1;
+                 }
+                 else CBModelo.Items.Add(Vehiculo.A_Modelo[i]);
+             }
 
-             //}
-             //else if (CBMarca.Text == "Mercedez") {
-             //    CBModelo.Items.Add("AMG"); // Para AMG               
-             //}
-             //else if (CBMarca.Text == "Honda") {
-             //    CBModelo.Items.Add("CRB 250");  // Para Honda
-             
-             //}
-             //else if (CBMarca.Text == "Kawasaki") {
-             //    CBModelo.Items.Add("Ninja");  // Para Kawazaki
-             //}
-             //else if (CBMarca.Text == "Ronco"){
-             //    CBModelo.Items.Add("Generico"); //Para ronco
-             //}
+             //Cargar Año
+             for (int j = 0; j < Vehiculo.v_contador; j++) {
+                 if (CBAnio.Items.Contains(Vehiculo.A_Anio[j]))
+                 {
+             v_contador = 1;
+             }
+             else CBAnio.Items.Add(Vehiculo.A_Anio[j]);
+             }
+                 //Cargar Condición
+             for(int s = 0; s< Vehiculo.v_contador; s++){
+             if (CBCondicion.Items.Contains(Vehiculo.A_Condicion[s])){
+             v_contador = 1;
+             } else CBCondicion.Items.Add(Vehiculo.A_Condicion[s]);
+             }
+
+                 DGVehiculos.Rows.Clear();
+             //Cargar las grilla
+             for (int i = 0; i<= Vehiculo.v_contador; i++){
+                 if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text && Vehiculo.A_Marca[i] == CBMarca.Text){                     
+                     DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
+                         Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
+                         Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]); }
+             }
          }
 
          private void btnBuscar_Click(object sender, EventArgs e)
@@ -192,20 +219,148 @@ namespace PryServicios
 
          private void Vehiculos_Load_1(object sender, EventArgs e)
          {
-             int v_contador = -1;
+             lblResUsuario.Text = vuser;
+         }
 
-             for (int i = 0; i <= Vehiculo.v_contador; i++) {
-                 for (int j = 1; j <= CBTVehiculo.Items.Count; j++)
+         private void CBModelo_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             //Cargar el Año
+             for (int j = 0; j <= Vehiculo.v_contador; j++) {
+                 if (CBAnio.Items.Contains(Vehiculo.A_Anio[j]))
                  {
-                     if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Items[j].ToString() ) {
-                         v_contador = 1;
-                     }
-                }
-                 if (v_contador == -1) {
-                    CBTVehiculo.Items.Add(Vehiculo.A_TVehiculo[i]);
+                     v_contador = 1;
                  }
-             
+                   
+                 else CBAnio.Items.Add(Vehiculo.A_Anio[j]);
              }
+
+             DGVehiculos.Rows.Clear();
+             //Cargar las grilla
+             for (int i = 0; i <= Vehiculo.v_contador; i++)
+             {
+                 if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text && Vehiculo.A_Marca[i] == CBMarca.Text &&
+                     Vehiculo.A_Modelo[i] == CBModelo.Text)
+                 {
+                     DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
+                         Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
+                         Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]);
+                 }
+             }
+         }
+
+         private void CBAnio_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             DGVehiculos.Rows.Clear();
+             //Cargar las grilla
+             for (int i = 0; i <= Vehiculo.v_contador; i++)
+             {
+                 if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text && Vehiculo.A_Marca[i] == CBMarca.Text &&
+                     Vehiculo.A_Modelo[i] == CBModelo.Text && Vehiculo.A_Anio[i].ToString() == CBAnio.Text)
+                 {
+                     DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
+                         Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
+                         Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]);
+                 }
+             }
+         }
+
+         private void CBCondicion_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             DGVehiculos.Rows.Clear();
+             //Cargar las grilla
+             for (int i = 0; i <= Vehiculo.v_contador; i++)
+             {
+                 if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text && Vehiculo.A_Marca[i] == CBMarca.Text &&
+                     Vehiculo.A_Modelo[i] == CBModelo.Text && Vehiculo.A_Anio[i].ToString() == CBAnio.Text
+                     && Vehiculo.A_Condicion[i] == CBCondicion.Text)
+                 {
+                     DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
+                         Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
+                         Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]);
+                 }
+             }
+         }
+
+         private void txtPInicial_TextChanged(object sender, EventArgs e)
+         {
+             DGVehiculos.Rows.Clear();
+             for (int i = 0; i< Vehiculo.v_contador; i ++){
+                 if (Vehiculo.A_Precio[i] >= Int32.Parse(txtPInicial.Text)) { 
+                 if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text && Vehiculo.A_Marca[i] == CBMarca.Text &&
+                     Vehiculo.A_Modelo[i] == CBModelo.Text && Vehiculo.A_Anio[i].ToString() == CBAnio.Text
+                     && Vehiculo.A_Condicion[i] == CBCondicion.Text)
+                 {
+                     DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
+                         Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
+                         Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]);
+                 }
+                 }
+         }}
+
+         private void txtPFinal_TextChanged(object sender, EventArgs e)
+         {
+             DGVehiculos.Rows.Clear();
+             for (int i = 0; i < Vehiculo.v_contador; i++)
+             {
+                 if (Vehiculo.A_Precio[i] <= Int32.Parse(txtPFinal.Text))
+                 {
+                     if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text && Vehiculo.A_Marca[i] == CBMarca.Text &&
+                         Vehiculo.A_Modelo[i] == CBModelo.Text && Vehiculo.A_Anio[i].ToString() == CBAnio.Text
+                         && Vehiculo.A_Condicion[i] == CBCondicion.Text)
+                     {
+                         DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
+                             Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
+                             Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]);
+                     }
+                 }
+             }
+         }
+
+         private void txtKInicial_TextChanged(object sender, EventArgs e)
+         {
+             DGVehiculos.Rows.Clear();
+             for (int i = 0; i < Vehiculo.v_contador; i++)
+             {
+                 if (Vehiculo.A_Kilometraje[i] >= Int32.Parse(txtKInicial.Text))
+                 {
+                     if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text && Vehiculo.A_Marca[i] == CBMarca.Text &&
+                         Vehiculo.A_Modelo[i] == CBModelo.Text && Vehiculo.A_Anio[i].ToString() == CBAnio.Text
+                         && Vehiculo.A_Condicion[i] == CBCondicion.Text)
+                     {
+                         DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
+                             Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
+                             Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]);
+                     }
+                 }
+             }
+         }
+
+         private void txtKFinal_TextChanged(object sender, EventArgs e)
+         {
+             DGVehiculos.Rows.Clear();
+             for (int i = 0; i < Vehiculo.v_contador; i++)
+             {
+                 if (Vehiculo.A_Kilometraje[i] <= Int32.Parse(txtKFinal.Text))
+                 {
+                     if (Vehiculo.A_TVehiculo[i] == CBTVehiculo.Text && Vehiculo.A_Marca[i] == CBMarca.Text &&
+                         Vehiculo.A_Modelo[i] == CBModelo.Text && Vehiculo.A_Anio[i].ToString() == CBAnio.Text
+                         && Vehiculo.A_Condicion[i] == CBCondicion.Text)
+                     {
+                         DGVehiculos.Rows.Add(Vehiculo.A_ID[i], Vehiculo.A_TVehiculo[i], Vehiculo.A_Marca[i],
+                             Vehiculo.A_Modelo[i], Vehiculo.A_Condicion[i], Vehiculo.A_Precio[i],
+                             Vehiculo.A_Anio[i], Vehiculo.A_Kilometraje[i]);
+                     }
+                 }
+             }
+         }
+
+         private void btnDetalles_Click(object sender, EventArgs e)
+         {
+             DetallesVehiculo ObjDetalleVehiculo = new DetallesVehiculo();
+
+             ObjDetalleVehiculo.vuser = lblResUsuario.Text;
+             ObjDetalleVehiculo.vID = Int32.Parse(txtId.Text);
+             ObjDetalleVehiculo.Show();
          }
         }
 

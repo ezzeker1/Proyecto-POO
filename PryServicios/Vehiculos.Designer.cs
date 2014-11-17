@@ -97,6 +97,7 @@
             this.CBAnio.Name = "CBAnio";
             this.CBAnio.Size = new System.Drawing.Size(121, 21);
             this.CBAnio.TabIndex = 11;
+            this.CBAnio.SelectedIndexChanged += new System.EventHandler(this.CBAnio_SelectedIndexChanged);
             // 
             // CBModelo
             // 
@@ -105,6 +106,7 @@
             this.CBModelo.Name = "CBModelo";
             this.CBModelo.Size = new System.Drawing.Size(121, 21);
             this.CBModelo.TabIndex = 10;
+            this.CBModelo.SelectedIndexChanged += new System.EventHandler(this.CBModelo_SelectedIndexChanged);
             // 
             // CBMarca
             // 
@@ -113,6 +115,7 @@
             this.CBMarca.Name = "CBMarca";
             this.CBMarca.Size = new System.Drawing.Size(121, 21);
             this.CBMarca.TabIndex = 9;
+            this.CBMarca.SelectedIndexChanged += new System.EventHandler(this.CBMarca_SelectedIndexChanged);
             // 
             // CBTVehiculo
             // 
@@ -205,6 +208,7 @@
             this.txtPFinal.Name = "txtPFinal";
             this.txtPFinal.Size = new System.Drawing.Size(58, 20);
             this.txtPFinal.TabIndex = 16;
+            this.txtPFinal.TextChanged += new System.EventHandler(this.txtPFinal_TextChanged);
             // 
             // lblPInicial
             // 
@@ -221,6 +225,7 @@
             this.txtPInicial.Name = "txtPInicial";
             this.txtPInicial.Size = new System.Drawing.Size(45, 20);
             this.txtPInicial.TabIndex = 15;
+            this.txtPInicial.TextChanged += new System.EventHandler(this.txtPInicial_TextChanged);
             // 
             // lblKFinal
             // 
@@ -246,6 +251,7 @@
             this.txtKFinal.Name = "txtKFinal";
             this.txtKFinal.Size = new System.Drawing.Size(58, 20);
             this.txtKFinal.TabIndex = 9;
+            this.txtKFinal.TextChanged += new System.EventHandler(this.txtKFinal_TextChanged);
             // 
             // txtKInicial
             // 
@@ -253,6 +259,7 @@
             this.txtKInicial.Name = "txtKInicial";
             this.txtKInicial.Size = new System.Drawing.Size(45, 20);
             this.txtKInicial.TabIndex = 8;
+            this.txtKInicial.TextChanged += new System.EventHandler(this.txtKInicial_TextChanged);
             // 
             // CBCondicion
             // 
@@ -261,6 +268,7 @@
             this.CBCondicion.Name = "CBCondicion";
             this.CBCondicion.Size = new System.Drawing.Size(121, 21);
             this.CBCondicion.TabIndex = 7;
+            this.CBCondicion.SelectedIndexChanged += new System.EventHandler(this.CBCondicion_SelectedIndexChanged);
             // 
             // lblKilometros
             // 
@@ -383,6 +391,7 @@
             this.btnDetalles.TabIndex = 8;
             this.btnDetalles.Text = "Ver Detalles";
             this.btnDetalles.UseVisualStyleBackColor = true;
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // txtId
             // 

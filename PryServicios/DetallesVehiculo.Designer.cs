@@ -33,7 +33,6 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblResprecio = new System.Windows.Forms.Label();
             this.btnComprar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblresMarca = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.blResModelo = new System.Windows.Forms.Label();
@@ -50,9 +49,11 @@
             this.lblResNombre = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblnombres = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PBVehiculo = new System.Windows.Forms.PictureBox();
+            this.lblID = new System.Windows.Forms.Label();
             this.GBDatosVehiculo.SuspendLayout();
             this.GBVendedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBVehiculo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -101,14 +102,6 @@
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = true;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(284, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(254, 182);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // lblresMarca
             // 
@@ -270,24 +263,45 @@
             this.lblnombres.TabIndex = 0;
             this.lblnombres.Text = "Nombre:";
             // 
+            // PBVehiculo
+            // 
+            this.PBVehiculo.Image = global::PryServicios.Properties.Resources.A7;
+            this.PBVehiculo.Location = new System.Drawing.Point(284, 63);
+            this.PBVehiculo.Name = "PBVehiculo";
+            this.PBVehiculo.Size = new System.Drawing.Size(254, 182);
+            this.PBVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBVehiculo.TabIndex = 5;
+            this.PBVehiculo.TabStop = false;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(560, 423);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(52, 13);
+            this.lblID.TabIndex = 16;
+            this.lblID.Text = "...............";
+            // 
             // DetallesVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(624, 445);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.GBVendedor);
             this.Controls.Add(this.GBDatosVehiculo);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PBVehiculo);
             this.Controls.Add(this.btnComprar);
             this.Controls.Add(this.lblResUsuario);
             this.Controls.Add(this.lblUsuario);
             this.Name = "DetallesVehiculo";
             this.Text = "Detalles del Vehiculo";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.DetallesVehiculo_Load);
             this.GBDatosVehiculo.ResumeLayout(false);
             this.GBDatosVehiculo.PerformLayout();
             this.GBVendedor.ResumeLayout(false);
             this.GBVendedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PBVehiculo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,7 +314,7 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblResprecio;
         private System.Windows.Forms.Button btnComprar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox PBVehiculo;
         private System.Windows.Forms.Label lblresMarca;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label blResModelo;
@@ -317,5 +331,6 @@
         private System.Windows.Forms.Label lblResNombre;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblnombres;
+        private System.Windows.Forms.Label lblID;
     }
 }
