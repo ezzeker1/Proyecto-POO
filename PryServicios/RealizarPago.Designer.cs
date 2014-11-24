@@ -46,10 +46,10 @@
             this.lblResTarjeta = new System.Windows.Forms.Label();
             this.lblTarjeta = new System.Windows.Forms.Label();
             this.GBInfodeCompra = new System.Windows.Forms.GroupBox();
-            this.lblitem = new System.Windows.Forms.Label();
+            this.lblDCompra = new System.Windows.Forms.Label();
             this.lblResValorCompra = new System.Windows.Forms.Label();
             this.lblValorCompra = new System.Windows.Forms.Label();
-            this.lblDCompra = new System.Windows.Forms.Label();
+            this.lblitem = new System.Windows.Forms.Label();
             this.GBMetodoDePago.SuspendLayout();
             this.GBDetalleTarjeta.SuspendLayout();
             this.GBInfodeCompra.SuspendLayout();
@@ -120,6 +120,7 @@
             this.CBTarjetaCredito.Name = "CBTarjetaCredito";
             this.CBTarjetaCredito.Size = new System.Drawing.Size(162, 21);
             this.CBTarjetaCredito.TabIndex = 1;
+            this.CBTarjetaCredito.SelectedIndexChanged += new System.EventHandler(this.CBTarjetaCredito_SelectedIndexChanged);
             // 
             // lblTarjetaCredito
             // 
@@ -233,15 +234,15 @@
             this.GBInfodeCompra.Text = "Información de la compra";
             this.GBInfodeCompra.Enter += new System.EventHandler(this.GBInfodeCompra_Enter);
             // 
-            // lblitem
+            // lblDCompra
             // 
-            this.lblitem.AutoSize = true;
-            this.lblitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblitem.Location = new System.Drawing.Point(18, 66);
-            this.lblitem.Name = "lblitem";
-            this.lblitem.Size = new System.Drawing.Size(149, 20);
-            this.lblitem.TabIndex = 0;
-            this.lblitem.Text = "............................";
+            this.lblDCompra.AutoSize = true;
+            this.lblDCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDCompra.Location = new System.Drawing.Point(33, 35);
+            this.lblDCompra.Name = "lblDCompra";
+            this.lblDCompra.Size = new System.Drawing.Size(117, 13);
+            this.lblDCompra.TabIndex = 6;
+            this.lblDCompra.Text = "Datos de la compra";
             // 
             // lblResValorCompra
             // 
@@ -263,21 +264,21 @@
             this.lblValorCompra.TabIndex = 4;
             this.lblValorCompra.Text = "Valor de la compra";
             // 
-            // lblDCompra
+            // lblitem
             // 
-            this.lblDCompra.AutoSize = true;
-            this.lblDCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDCompra.Location = new System.Drawing.Point(33, 35);
-            this.lblDCompra.Name = "lblDCompra";
-            this.lblDCompra.Size = new System.Drawing.Size(117, 13);
-            this.lblDCompra.TabIndex = 6;
-            this.lblDCompra.Text = "Datos de la compra";
+            this.lblitem.AutoSize = true;
+            this.lblitem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblitem.Location = new System.Drawing.Point(18, 66);
+            this.lblitem.Name = "lblitem";
+            this.lblitem.Size = new System.Drawing.Size(149, 20);
+            this.lblitem.TabIndex = 0;
+            this.lblitem.Text = "............................";
             // 
             // RealizarPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 389);
+            this.ClientSize = new System.Drawing.Size(624, 406);
             this.Controls.Add(this.GBInfodeCompra);
             this.Controls.Add(this.GBDetalleTarjeta);
             this.Controls.Add(this.GBMetodoDePago);

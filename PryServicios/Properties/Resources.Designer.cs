@@ -113,6 +113,26 @@ namespace PryServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CBR {
+            get {
+                object obj = ResourceManager.GetObject("CBR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap depa {
+            get {
+                object obj = ResourceManager.GetObject("depa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Inmuebles {
             get {
                 object obj = ResourceManager.GetObject("Inmuebles", resourceCulture);
@@ -143,6 +163,16 @@ namespace PryServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mustang {
+            get {
+                object obj = ResourceManager.GetObject("mustang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ninja {
             get {
                 object obj = ResourceManager.GetObject("Ninja", resourceCulture);
@@ -166,6 +196,16 @@ namespace PryServicios.Properties {
         internal static System.Drawing.Bitmap Rio {
             get {
                 object obj = ResourceManager.GetObject("Rio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Services {
+            get {
+                object obj = ResourceManager.GetObject("Services", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

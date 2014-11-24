@@ -50,7 +50,7 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUsuario.Location = new System.Drawing.Point(554, 9);
+            this.lblUsuario.Location = new System.Drawing.Point(518, 9);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(46, 13);
             this.lblUsuario.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.lblResUsuario.AutoSize = true;
             this.lblResUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblResUsuario.Location = new System.Drawing.Point(606, 9);
+            this.lblResUsuario.Location = new System.Drawing.Point(570, 9);
             this.lblResUsuario.Name = "lblResUsuario";
             this.lblResUsuario.Size = new System.Drawing.Size(52, 13);
             this.lblResUsuario.TabIndex = 2;
@@ -139,7 +139,7 @@
             this.GBBuscar.Controls.Add(this.PBServicios);
             this.GBBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GBBuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.GBBuscar.Location = new System.Drawing.Point(24, 271);
+            this.GBBuscar.Location = new System.Drawing.Point(21, 39);
             this.GBBuscar.Name = "GBBuscar";
             this.GBBuscar.Size = new System.Drawing.Size(601, 232);
             this.GBBuscar.TabIndex = 9;
@@ -149,9 +149,9 @@
             // GBUsuario
             // 
             this.GBUsuario.Controls.Add(this.btnPerfil);
-            this.GBUsuario.Location = new System.Drawing.Point(54, 57);
+            this.GBUsuario.Location = new System.Drawing.Point(420, 309);
             this.GBUsuario.Name = "GBUsuario";
-            this.GBUsuario.Size = new System.Drawing.Size(409, 132);
+            this.GBUsuario.Size = new System.Drawing.Size(202, 103);
             this.GBUsuario.TabIndex = 10;
             this.GBUsuario.TabStop = false;
             this.GBUsuario.Text = "Opciones para El usuario";
@@ -159,7 +159,7 @@
             // btnPerfil
             // 
             this.btnPerfil.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnPerfil.Location = new System.Drawing.Point(14, 37);
+            this.btnPerfil.Location = new System.Drawing.Point(25, 34);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(144, 41);
             this.btnPerfil.TabIndex = 0;
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(670, 515);
+            this.ClientSize = new System.Drawing.Size(634, 425);
             this.Controls.Add(this.GBUsuario);
             this.Controls.Add(this.GBBuscar);
             this.Controls.Add(this.lblResUsuario);

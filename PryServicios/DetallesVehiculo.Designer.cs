@@ -49,8 +49,8 @@
             this.lblResNombre = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblnombres = new System.Windows.Forms.Label();
-            this.PBVehiculo = new System.Windows.Forms.PictureBox();
             this.lblID = new System.Windows.Forms.Label();
+            this.PBVehiculo = new System.Windows.Forms.PictureBox();
             this.GBDatosVehiculo.SuspendLayout();
             this.GBVendedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBVehiculo)).BeginInit();
@@ -263,16 +263,6 @@
             this.lblnombres.TabIndex = 0;
             this.lblnombres.Text = "Nombre:";
             // 
-            // PBVehiculo
-            // 
-            this.PBVehiculo.Image = global::PryServicios.Properties.Resources.A7;
-            this.PBVehiculo.Location = new System.Drawing.Point(284, 63);
-            this.PBVehiculo.Name = "PBVehiculo";
-            this.PBVehiculo.Size = new System.Drawing.Size(254, 182);
-            this.PBVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PBVehiculo.TabIndex = 5;
-            this.PBVehiculo.TabStop = false;
-            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -281,6 +271,15 @@
             this.lblID.Size = new System.Drawing.Size(52, 13);
             this.lblID.TabIndex = 16;
             this.lblID.Text = "...............";
+            // 
+            // PBVehiculo
+            // 
+            this.PBVehiculo.Location = new System.Drawing.Point(284, 63);
+            this.PBVehiculo.Name = "PBVehiculo";
+            this.PBVehiculo.Size = new System.Drawing.Size(254, 182);
+            this.PBVehiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBVehiculo.TabIndex = 5;
+            this.PBVehiculo.TabStop = false;
             // 
             // DetallesVehiculo
             // 

@@ -74,12 +74,20 @@
             this.lblProvincia = new System.Windows.Forms.Label();
             this.lblPais = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGAdquisiciones = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNIdProducto = new System.Windows.Forms.TextBox();
+            this.btnComprobante = new System.Windows.Forms.Button();
+            this.c1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GBUsuario.SuspendLayout();
             this.GBPago.SuspendLayout();
             this.GBFacturacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGAdquisiciones)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -102,6 +110,7 @@
             // 
             // GBUsuario
             // 
+            this.GBUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.GBUsuario.Controls.Add(this.lblResPregunta);
             this.GBUsuario.Controls.Add(this.lblPreguntaSecreta);
             this.GBUsuario.Controls.Add(this.lblResEdad);
@@ -262,6 +271,7 @@
             // 
             // GBPago
             // 
+            this.GBPago.BackColor = System.Drawing.Color.LightGray;
             this.GBPago.Controls.Add(this.btnRegistrar);
             this.GBPago.Controls.Add(this.lblResproveedor);
             this.GBPago.Controls.Add(this.lblProveedor);
@@ -394,6 +404,7 @@
             // 
             // GBFacturacion
             // 
+            this.GBFacturacion.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.GBFacturacion.Controls.Add(this.lblResdistrito);
             this.GBFacturacion.Controls.Add(this.lblDistrito);
             this.GBFacturacion.Controls.Add(this.CBFSeleccionar);
@@ -544,31 +555,92 @@
             this.lblDireccion.TabIndex = 0;
             this.lblDireccion.Text = "Dirección:";
             // 
-            // dataGridView1
+            // DGAdquisiciones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 414);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(810, 148);
-            this.dataGridView1.TabIndex = 5;
+            this.DGAdquisiciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGAdquisiciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.c1,
+            this.c2,
+            this.c3,
+            this.c4,
+            this.c5});
+            this.DGAdquisiciones.Location = new System.Drawing.Point(88, 411);
+            this.DGAdquisiciones.Name = "DGAdquisiciones";
+            this.DGAdquisiciones.Size = new System.Drawing.Size(643, 148);
+            this.DGAdquisiciones.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 380);
+            this.label1.Location = new System.Drawing.Point(15, 353);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(253, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Historial de Adquisiciones";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Aquamarine;
+            this.label2.Location = new System.Drawing.Point(472, 361);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Ver comprobante:";
+            // 
+            // txtNIdProducto
+            // 
+            this.txtNIdProducto.Location = new System.Drawing.Point(569, 357);
+            this.txtNIdProducto.Name = "txtNIdProducto";
+            this.txtNIdProducto.Size = new System.Drawing.Size(41, 20);
+            this.txtNIdProducto.TabIndex = 8;
+            // 
+            // btnComprobante
+            // 
+            this.btnComprobante.Location = new System.Drawing.Point(627, 356);
+            this.btnComprobante.Name = "btnComprobante";
+            this.btnComprobante.Size = new System.Drawing.Size(75, 23);
+            this.btnComprobante.TabIndex = 9;
+            this.btnComprobante.Text = "Ir";
+            this.btnComprobante.UseVisualStyleBackColor = true;
+            this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
+            // 
+            // c1
+            // 
+            this.c1.HeaderText = "Id Producto";
+            this.c1.Name = "c1";
+            // 
+            // c2
+            // 
+            this.c2.HeaderText = "Tipo Adquisicion";
+            this.c2.Name = "c2";
+            // 
+            // c3
+            // 
+            this.c3.HeaderText = "Descripcion";
+            this.c3.Name = "c3";
+            // 
+            // c4
+            // 
+            this.c4.HeaderText = "Precio";
+            this.c4.Name = "c4";
+            // 
+            // c5
+            // 
+            this.c5.HeaderText = "Fecha de Adquisicion";
+            this.c5.Name = "c5";
             // 
             // PerfilUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 583);
+            this.Controls.Add(this.btnComprobante);
+            this.Controls.Add(this.txtNIdProducto);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGAdquisiciones);
             this.Controls.Add(this.GBFacturacion);
             this.Controls.Add(this.GBPago);
             this.Controls.Add(this.GBUsuario);
@@ -583,7 +655,7 @@
             this.GBPago.PerformLayout();
             this.GBFacturacion.ResumeLayout(false);
             this.GBFacturacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGAdquisiciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,7 +695,7 @@
         private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.GroupBox GBFacturacion;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGAdquisiciones;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblPais;
         private System.Windows.Forms.Button btnFModificar;
@@ -639,5 +711,13 @@
         private System.Windows.Forms.Label lblFSeleccionar;
         private System.Windows.Forms.Label lblResdistrito;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtNIdProducto;
+        private System.Windows.Forms.Button btnComprobante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c5;
     }
 }

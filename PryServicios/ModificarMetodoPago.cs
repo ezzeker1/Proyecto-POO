@@ -103,5 +103,10 @@ namespace PryServicios
                 }
             }
         }
+
+        private void GBMetodoPago_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

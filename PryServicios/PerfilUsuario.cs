@@ -30,7 +30,7 @@ namespace PryServicios
         {
             lblResUsuario.Text = vuser;
             int v_posicion = 0;
-
+       
             v_posicion = Usuario.PosicionUsuario(lblResUsuario.Text);
 
 
@@ -69,6 +69,14 @@ namespace PryServicios
                     lblResPregunta.Text = Usuario.A_PreguntaSecreta[v_posicion];
                     lblResEdad.Text = Usuario.A_Edad[v_posicion].ToString();
                 }
+
+            //Cargar las adquisiciones del Usuario
+                for (int j = 0; j < Adquisiciones.v_contador; j++) {
+                    if (lblResUsuario.Text == Adquisiciones.A_Usuario[j]) {
+                        DGAdquisiciones.Rows.Add(Adquisiciones.A_ID[j], Adquisiciones.A_Tipoadquisicion[j], Adquisiciones.A_Descripcion[j], Adquisiciones.A_Precio[j], Adquisiciones.A_Fecha[j]);
+                    }
+                }
+
           }
 
         private void CBSeleccion_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,6 +154,18 @@ namespace PryServicios
         {
             ModificarInfoFacturacion ObjModificarInfoFacturacion = new ModificarInfoFacturacion();
             ObjModificarInfoFacturacion.Show();
+        }
+
+        private void btnComprobante_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < Recibo.v_Contador; i++) {
+                if (Recibo.A_ID[i] == Int32.Parse(txtNIdProducto.Text)) {
+                    Comprobante objComprobante = new Comprobante();
+                    objComprobante.vuser = lblResUsuario.Text;
+                    objComprobante.vID = Int32.Parse(txtNIdProducto.Text);
+                    objComprobante.Show();                    
+                }
+            }
         }
 
     }

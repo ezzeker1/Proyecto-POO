@@ -30,6 +30,7 @@
         {
             this.lblResUsuario = new System.Windows.Forms.Label();
             this.GBMetodoPago = new System.Windows.Forms.GroupBox();
+            this.CBNTarjeta = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.txtResTitular = new System.Windows.Forms.TextBox();
             this.lblTitular = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.CBTipo = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.CBNTarjeta = new System.Windows.Forms.ComboBox();
             this.GBMetodoPago.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,16 @@
             this.GBMetodoPago.TabIndex = 2;
             this.GBMetodoPago.TabStop = false;
             this.GBMetodoPago.Text = "Método de Pago";
+            this.GBMetodoPago.Enter += new System.EventHandler(this.GBMetodoPago_Enter);
+            // 
+            // CBNTarjeta
+            // 
+            this.CBNTarjeta.FormattingEnabled = true;
+            this.CBNTarjeta.Location = new System.Drawing.Point(84, 32);
+            this.CBNTarjeta.Name = "CBNTarjeta";
+            this.CBNTarjeta.Size = new System.Drawing.Size(192, 21);
+            this.CBNTarjeta.TabIndex = 14;
+            this.CBNTarjeta.SelectedIndexChanged += new System.EventHandler(this.CBNTarjeta_SelectedIndexChanged);
             // 
             // btnGuardar
             // 
@@ -201,15 +211,6 @@
             this.lblUsuario.Size = new System.Drawing.Size(46, 13);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario:";
-            // 
-            // CBNTarjeta
-            // 
-            this.CBNTarjeta.FormattingEnabled = true;
-            this.CBNTarjeta.Location = new System.Drawing.Point(84, 32);
-            this.CBNTarjeta.Name = "CBNTarjeta";
-            this.CBNTarjeta.Size = new System.Drawing.Size(192, 21);
-            this.CBNTarjeta.TabIndex = 14;
-            this.CBNTarjeta.SelectedIndexChanged += new System.EventHandler(this.CBNTarjeta_SelectedIndexChanged);
             // 
             // ModificarMetodoPago
             // 

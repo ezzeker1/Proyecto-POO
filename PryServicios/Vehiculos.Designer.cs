@@ -402,10 +402,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PryServicios.Properties.Resources.Bugatti;
+            this.pictureBox1.Image = global::PryServicios.Properties.Resources.mustang;
             this.pictureBox1.Location = new System.Drawing.Point(568, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 145);
+            this.pictureBox1.Size = new System.Drawing.Size(254, 161);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
